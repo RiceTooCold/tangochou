@@ -1,0 +1,688 @@
+{
+  "lesson": 10,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "10単語.pdf",
+  "words": [
+    {
+      "id": "l10-001",
+      "word": "顔",
+      "reading": "かお",
+      "accent": [
+        0
+      ],
+      "meaning": "臉",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-002",
+      "word": "洗う",
+      "reading": "あらう",
+      "accent": [
+        0
+      ],
+      "meaning": "洗",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-003",
+      "word": "磨く［歯を磨く］",
+      "reading": "みがく［はをみがく］",
+      "accent": [
+        0
+      ],
+      "meaning": "刷（牙）",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-004",
+      "word": "シャワー",
+      "reading": "シャワー",
+      "accent": [
+        1
+      ],
+      "meaning": "淋浴",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-005",
+      "word": "シャワーを浴びる",
+      "reading": "シャワーをあびる",
+      "accent": [],
+      "meaning": "淋浴",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-006",
+      "word": "入る",
+      "reading": "はいる",
+      "accent": [
+        1
+      ],
+      "meaning": "進入",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-007",
+      "word": "出る",
+      "reading": "でる",
+      "accent": [
+        1
+      ],
+      "meaning": "出去／出門",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-008",
+      "word": "乗る",
+      "reading": "のる",
+      "accent": [
+        0
+      ],
+      "meaning": "搭乘",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-009",
+      "word": "降りる",
+      "reading": "おりる",
+      "accent": [
+        2
+      ],
+      "meaning": "下（車）",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-010",
+      "word": "電車を降りる",
+      "reading": "でんしゃをおりる",
+      "accent": [],
+      "meaning": "下車",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-011",
+      "word": "着く",
+      "reading": "つく",
+      "accent": [
+        0
+      ],
+      "meaning": "抵達／到達",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-012",
+      "word": "駅に着く",
+      "reading": "えきにつく",
+      "accent": [],
+      "meaning": "抵達車站",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-013",
+      "word": "ホテル",
+      "reading": "ホテル",
+      "accent": [
+        1
+      ],
+      "meaning": "飯店／旅館",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-014",
+      "word": "乗り換える",
+      "reading": "のりかえる",
+      "accent": [
+        4
+      ],
+      "meaning": "換乘／轉乘",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-015",
+      "word": "下りる",
+      "reading": "おりる",
+      "accent": [
+        2
+      ],
+      "meaning": "下（樓梯）",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-016",
+      "word": "階段を下りる",
+      "reading": "かいだんをおりる",
+      "accent": [],
+      "meaning": "下樓梯",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-017",
+      "word": "階段",
+      "reading": "かいだん",
+      "accent": [
+        0
+      ],
+      "meaning": "樓梯",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-018",
+      "word": "論文",
+      "reading": "ろんぶん",
+      "accent": [
+        0
+      ],
+      "meaning": "論文",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-019",
+      "word": "どうやって",
+      "reading": "どうやって",
+      "accent": [
+        1
+      ],
+      "meaning": "該怎麼～（問行動方法）",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": []
+    },
+    {
+      "id": "l10-020",
+      "word": "横浜",
+      "reading": "よこはま",
+      "accent": [
+        0
+      ],
+      "meaning": "橫濱",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-021",
+      "word": "JR",
+      "reading": "ジェーアール",
+      "accent": [
+        3
+      ],
+      "meaning": "JR",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-022",
+      "word": "渋谷",
+      "reading": "しぶや",
+      "accent": [
+        0
+      ],
+      "meaning": "澀谷",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-023",
+      "word": "上野",
+      "reading": "うえの",
+      "accent": [
+        0
+      ],
+      "meaning": "上野",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-024",
+      "word": "行きたいんですが...",
+      "reading": "いきたいんですが",
+      "accent": [],
+      "meaning": "我想去～",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l10-025",
+      "word": "お台場",
+      "reading": "おだいば",
+      "accent": [
+        0
+      ],
+      "meaning": "御台場",
+      "section": "文型１",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-026",
+      "word": "なる",
+      "reading": "なる",
+      "accent": [
+        1
+      ],
+      "meaning": "變／變成",
+      "section": "文型３",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-027",
+      "word": "服",
+      "reading": "ふく",
+      "accent": [
+        2
+      ],
+      "meaning": "衣服",
+      "section": "文型３",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-028",
+      "word": "成績",
+      "reading": "せいせき",
+      "accent": [
+        0
+      ],
+      "meaning": "成績",
+      "section": "文型３",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-029",
+      "word": "どうなりましたか",
+      "reading": "どうなりましたか",
+      "accent": [],
+      "meaning": "變得怎麼樣了呢？",
+      "section": "文型３",
+      "lesson": 10,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l10-030",
+      "word": "昔",
+      "reading": "むかし",
+      "accent": [
+        0
+      ],
+      "meaning": "從前／很久以前",
+      "section": "文型３",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-031",
+      "word": "降る［雨が降る］",
+      "reading": "ふる［あめがふる］",
+      "accent": [
+        1
+      ],
+      "meaning": "降（雨／雪）",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-032",
+      "word": "止む［雨が止む］",
+      "reading": "やむ［あめがやむ］",
+      "accent": [
+        0
+      ],
+      "meaning": "（雨／風）停止",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-033",
+      "word": "空",
+      "reading": "そら",
+      "accent": [
+        1
+      ],
+      "meaning": "天空",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-034",
+      "word": "台風",
+      "reading": "たいふう",
+      "accent": [
+        3
+      ],
+      "meaning": "颱風",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-035",
+      "word": "風",
+      "reading": "かぜ",
+      "accent": [
+        0
+      ],
+      "meaning": "風",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-036",
+      "word": "吹く［風が吹く］",
+      "reading": "ふく［かぜがふく］",
+      "accent": [
+        1
+      ],
+      "meaning": "吹／颳",
+      "section": "文型４",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-037",
+      "word": "見学（する）",
+      "reading": "けんがく",
+      "accent": [
+        0
+      ],
+      "meaning": "校外教學／參訪",
+      "section": "文型５、６",
+      "lesson": 10,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l10-038",
+      "word": "集める",
+      "reading": "あつめる",
+      "accent": [
+        3
+      ],
+      "meaning": "收集／集合",
+      "section": "文型７",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-039",
+      "word": "字",
+      "reading": "じ",
+      "accent": [
+        1
+      ],
+      "meaning": "字",
+      "section": "文型７",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-040",
+      "word": "よく",
+      "reading": "よく",
+      "accent": [
+        1
+      ],
+      "meaning": "好好地／充分地",
+      "section": "文型７",
+      "lesson": 10,
+      "tags": []
+    },
+    {
+      "id": "l10-041",
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "accent": [
+        1
+      ],
+      "meaning": "全部",
+      "section": "文型７",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-042",
+      "word": "半分",
+      "reading": "はんぶん",
+      "accent": [
+        3
+      ],
+      "meaning": "一半",
+      "section": "文型７",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-043",
+      "word": "スケジュール",
+      "reading": "スケジュール",
+      "accent": [
+        2,
+        3
+      ],
+      "meaning": "行事曆【英 schedule】",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-044",
+      "word": "見物（する）",
+      "reading": "けんぶつ",
+      "accent": [
+        0
+      ],
+      "meaning": "參觀",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l10-045",
+      "word": "豆腐",
+      "reading": "とうふ",
+      "accent": [
+        0
+      ],
+      "meaning": "豆腐",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-046",
+      "word": "泊まる",
+      "reading": "とまる",
+      "accent": [
+        0
+      ],
+      "meaning": "住宿",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l10-047",
+      "word": "旅館",
+      "reading": "りょかん",
+      "accent": [
+        0
+      ],
+      "meaning": "旅館",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l10-048",
+      "word": "朝早い",
+      "reading": "あさはやい",
+      "accent": [
+        1
+      ],
+      "meaning": "早上／一大早",
+      "section": "会話",
+      "lesson": 10,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l10-049",
+      "word": "早く",
+      "reading": "はやく",
+      "accent": [
+        1
+      ],
+      "meaning": "早",
+      "section": "会話",
+      "lesson": 10,
+      "tags": []
+    },
+    {
+      "id": "l10-050",
+      "word": "その前に",
+      "reading": "そのまえに",
+      "accent": [
+        3
+      ],
+      "meaning": "在那之前",
+      "section": "文法",
+      "lesson": 10,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,1080 @@
+{
+  "lesson": 12,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "12単語.pdf",
+  "words": [
+    {
+      "id": "l12-001",
+      "word": "着る",
+      "reading": "きる",
+      "accent": [
+        0
+      ],
+      "meaning": "穿",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-002",
+      "word": "脱ぐ",
+      "reading": "ぬぐ",
+      "accent": [
+        1
+      ],
+      "meaning": "脫下",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-003",
+      "word": "スーツ",
+      "reading": "スーツ",
+      "accent": [
+        1
+      ],
+      "meaning": "西裝",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-004",
+      "word": "上着",
+      "reading": "うわぎ",
+      "accent": [
+        0
+      ],
+      "meaning": "上衣",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-005",
+      "word": "セーター",
+      "reading": "セーター",
+      "accent": [
+        1
+      ],
+      "meaning": "毛衣",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-006",
+      "word": "ズボン",
+      "reading": "ズボン",
+      "accent": [
+        1,
+        2
+      ],
+      "meaning": "長褲",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-007",
+      "word": "スカート",
+      "reading": "スカート",
+      "accent": [
+        2
+      ],
+      "meaning": "裙子",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-008",
+      "word": "靴下",
+      "reading": "くつした",
+      "accent": [
+        4,
+        2
+      ],
+      "meaning": "襪子",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-009",
+      "word": "靴",
+      "reading": "くつ",
+      "accent": [
+        2
+      ],
+      "meaning": "鞋子",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-010",
+      "word": "はく",
+      "reading": "はく",
+      "accent": [
+        0
+      ],
+      "meaning": "穿（長褲／裙子／鞋子）",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-011",
+      "word": "被る",
+      "reading": "かぶる",
+      "accent": [
+        2
+      ],
+      "meaning": "戴（帽子）",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-012",
+      "word": "取る",
+      "reading": "とる",
+      "accent": [
+        1
+      ],
+      "meaning": "脫下／拿下／摘下",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-013",
+      "word": "めがね",
+      "reading": "めがね",
+      "accent": [
+        1
+      ],
+      "meaning": "眼鏡",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-014",
+      "word": "［めがねを］かける",
+      "reading": "かける",
+      "accent": [
+        2
+      ],
+      "meaning": "戴上（眼鏡）",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-015",
+      "word": "ネクタイ",
+      "reading": "ネクタイ",
+      "accent": [
+        1
+      ],
+      "meaning": "領帶",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-016",
+      "word": "［ネクタイを］する",
+      "reading": "する",
+      "accent": [
+        0
+      ],
+      "meaning": "繫（領帶）",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-017",
+      "word": "アクセサリー",
+      "reading": "アクセサリー",
+      "accent": [
+        1,
+        3
+      ],
+      "meaning": "飾品",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-018",
+      "word": "色",
+      "reading": "いろ",
+      "accent": [
+        2
+      ],
+      "meaning": "顏色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-019",
+      "word": "着物",
+      "reading": "きもの",
+      "accent": [
+        0
+      ],
+      "meaning": "和服",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-020",
+      "word": "何色",
+      "reading": "なにいろ",
+      "accent": [
+        0
+      ],
+      "meaning": "什麼顏色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-021",
+      "word": "グレー",
+      "reading": "グレー",
+      "accent": [
+        2
+      ],
+      "meaning": "灰色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-022",
+      "word": "茶色",
+      "reading": "ちゃいろ",
+      "accent": [
+        0
+      ],
+      "meaning": "棕色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-023",
+      "word": "ピンク",
+      "reading": "ピンク",
+      "accent": [
+        1
+      ],
+      "meaning": "粉紅色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-024",
+      "word": "緑",
+      "reading": "みどり",
+      "accent": [
+        1
+      ],
+      "meaning": "綠色",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-025",
+      "word": "金",
+      "reading": "きん",
+      "accent": [
+        1
+      ],
+      "meaning": "金",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-026",
+      "word": "ネックレス",
+      "reading": "ネックレス",
+      "accent": [
+        1
+      ],
+      "meaning": "項鍊",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-027",
+      "word": "イヤリング",
+      "reading": "イヤリング",
+      "accent": [
+        1
+      ],
+      "meaning": "耳環",
+      "section": "文型１",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-028",
+      "word": "どうして",
+      "reading": "どうして",
+      "accent": [
+        1
+      ],
+      "meaning": "為什麼",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-029",
+      "word": "〜からだ",
+      "reading": "からだ",
+      "accent": [],
+      "meaning": "因為〜",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-030",
+      "word": "カラオケ",
+      "reading": "カラオケ",
+      "accent": [
+        0
+      ],
+      "meaning": "卡拉OK",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-031",
+      "word": "下手",
+      "reading": "へたな",
+      "accent": [
+        2
+      ],
+      "meaning": "笨拙的／不擅長的",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l12-032",
+      "word": "急ぐ",
+      "reading": "いそぐ",
+      "accent": [
+        2
+      ],
+      "meaning": "急／快／著急",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-033",
+      "word": "国際関係",
+      "reading": "こくさいかんけい",
+      "accent": [
+        5
+      ],
+      "meaning": "國際關係",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-034",
+      "word": "頑張ってください",
+      "reading": "がんばってください",
+      "accent": [],
+      "meaning": "請加油",
+      "section": "文型２",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-035",
+      "word": "バラ",
+      "reading": "バラ",
+      "accent": [
+        0
+      ],
+      "meaning": "玫瑰",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-036",
+      "word": "梨",
+      "reading": "なし",
+      "accent": [
+        2
+      ],
+      "meaning": "梨子",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-037",
+      "word": "植物",
+      "reading": "しょくぶつ",
+      "accent": [
+        2
+      ],
+      "meaning": "植物",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-038",
+      "word": "竹",
+      "reading": "たけ",
+      "accent": [
+        0
+      ],
+      "meaning": "竹子",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-039",
+      "word": "梅",
+      "reading": "うめ",
+      "accent": [
+        0
+      ],
+      "meaning": "梅",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-040",
+      "word": "ようかん",
+      "reading": "ようかん",
+      "accent": [
+        1
+      ],
+      "meaning": "羊羹",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-041",
+      "word": "蒲鉾",
+      "reading": "かまぼこ",
+      "accent": [
+        0
+      ],
+      "meaning": "魚板",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-042",
+      "word": "楽器",
+      "reading": "がっき",
+      "accent": [
+        0
+      ],
+      "meaning": "樂器",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-043",
+      "word": "三味線",
+      "reading": "しゃみせん",
+      "accent": [
+        0
+      ],
+      "meaning": "三味線",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-044",
+      "word": "まぐろ",
+      "reading": "まぐろ",
+      "accent": [
+        0
+      ],
+      "meaning": "鮪魚",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-045",
+      "word": "団子",
+      "reading": "だんご",
+      "accent": [
+        0
+      ],
+      "meaning": "米糰／丸子",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-046",
+      "word": "フエ",
+      "reading": "フエ",
+      "accent": [
+        1
+      ],
+      "meaning": "順化市",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-047",
+      "word": "町",
+      "reading": "まち",
+      "accent": [
+        2
+      ],
+      "meaning": "城市／城鎮",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-048",
+      "word": "どうぞよろしくお願いします",
+      "reading": "どうぞよろしくおねがいします",
+      "accent": [],
+      "meaning": "請多指教",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-049",
+      "word": "自己紹介",
+      "reading": "じこしょうかい",
+      "accent": [
+        3
+      ],
+      "meaning": "自我介紹",
+      "section": "文型４",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-050",
+      "word": "〜てみる",
+      "reading": "てみる",
+      "accent": [
+        2
+      ],
+      "meaning": "補助動詞－嘗試...",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-051",
+      "word": "コート",
+      "reading": "コート",
+      "accent": [
+        1
+      ],
+      "meaning": "外套",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-052",
+      "word": "いつか",
+      "reading": "いつか",
+      "accent": [
+        1
+      ],
+      "meaning": "有一天／不久",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-053",
+      "word": "世界",
+      "reading": "せかい",
+      "accent": [
+        1
+      ],
+      "meaning": "世界",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-054",
+      "word": "世界旅行",
+      "reading": "せかいりょこう",
+      "accent": [
+        4
+      ],
+      "meaning": "環遊世界",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-055",
+      "word": "神様",
+      "reading": "かみさま",
+      "accent": [
+        1
+      ],
+      "meaning": "神明／老天爺",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-056",
+      "word": "踊り",
+      "reading": "おどり",
+      "accent": [
+        0
+      ],
+      "meaning": "舞蹈",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-057",
+      "word": "浴衣",
+      "reading": "ゆかた",
+      "accent": [
+        0
+      ],
+      "meaning": "浴衣",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-058",
+      "word": "盆踊り",
+      "reading": "ぼんおどり",
+      "accent": [
+        3
+      ],
+      "meaning": "盆舞／盂蘭盆會舞",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-059",
+      "word": "踊る",
+      "reading": "おどる",
+      "accent": [
+        0
+      ],
+      "meaning": "跳舞",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-060",
+      "word": "農業",
+      "reading": "のうぎょう",
+      "accent": [
+        1
+      ],
+      "meaning": "農業",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-061",
+      "word": "関係",
+      "reading": "かんけい",
+      "accent": [
+        0
+      ],
+      "meaning": "關係／關聯",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-062",
+      "word": "（お）米",
+      "reading": "（お）こめ",
+      "accent": [
+        2
+      ],
+      "meaning": "米／稻米",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-063",
+      "word": "（お）米ができる",
+      "reading": "",
+      "accent": [],
+      "meaning": "稻米豐收",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-064",
+      "word": "喜ぶ",
+      "reading": "よろこぶ",
+      "accent": [
+        3
+      ],
+      "meaning": "歡喜／喜悅",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-065",
+      "word": "周り",
+      "reading": "まわり",
+      "accent": [
+        0
+      ],
+      "meaning": "周圍",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-066",
+      "word": "提灯",
+      "reading": "ちょうちん",
+      "accent": [
+        3
+      ],
+      "meaning": "燈籠",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-067",
+      "word": "ランプ",
+      "reading": "ランプ",
+      "accent": [
+        1
+      ],
+      "meaning": "燈",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-068",
+      "word": "屋台",
+      "reading": "やたい",
+      "accent": [
+        1
+      ],
+      "meaning": "攤販",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-069",
+      "word": "並ぶ",
+      "reading": "ならぶ",
+      "accent": [
+        0
+      ],
+      "meaning": "排隊",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l12-070",
+      "word": "ゲーム",
+      "reading": "ゲーム",
+      "accent": [
+        1
+      ],
+      "meaning": "遊戲（英 Game）",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-071",
+      "word": "おせち料理",
+      "reading": "おせちりょうり",
+      "accent": [
+        4
+      ],
+      "meaning": "年菜",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-072",
+      "word": "（お）正月",
+      "reading": "（お）しょうがつ",
+      "accent": [
+        4
+      ],
+      "meaning": "正月／新年",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-073",
+      "word": "特別な",
+      "reading": "とくべつな",
+      "accent": [
+        0
+      ],
+      "meaning": "特別的",
+      "section": "文型５",
+      "lesson": 12,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l12-074",
+      "word": "ようこそ",
+      "reading": "ようこそ",
+      "accent": [
+        1
+      ],
+      "meaning": "熱烈歡迎／歡迎到來",
+      "section": "会話",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-075",
+      "word": "お世話になります",
+      "reading": "おせわになります",
+      "accent": [
+        2
+      ],
+      "meaning": "麻煩您照顧了",
+      "section": "会話",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l12-076",
+      "word": "法被",
+      "reading": "はっぴ",
+      "accent": [
+        0
+      ],
+      "meaning": "日本傳統祭典服裝",
+      "section": "会話",
+      "lesson": 12,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l12-077",
+      "word": "いいですね",
+      "reading": "いいですね",
+      "accent": [
+        1
+      ],
+      "meaning": "（聽起來）不錯／很好",
+      "section": "会話",
+      "lesson": 12,
+      "tags": [
+        "慣用句"
+      ]
+    }
+  ]
+}

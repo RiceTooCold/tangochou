@@ -1,0 +1,783 @@
+{
+  "lesson": 9,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "9単語.pdf",
+  "words": [
+    {
+      "id": "l9-001",
+      "word": "座る",
+      "reading": "すわる",
+      "accent": [
+        0
+      ],
+      "meaning": "坐",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-002",
+      "word": "立つ",
+      "reading": "たつ",
+      "accent": [
+        1
+      ],
+      "meaning": "站",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-003",
+      "word": "質問（する）",
+      "reading": "しつもん",
+      "accent": [
+        0
+      ],
+      "meaning": "詢問／提問",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-004",
+      "word": "答える",
+      "reading": "こたえる",
+      "accent": [
+        3
+      ],
+      "meaning": "回答",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-005",
+      "word": "グラフ",
+      "reading": "グラフ",
+      "accent": [
+        1
+      ],
+      "meaning": "圖表",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-006",
+      "word": "すみません",
+      "reading": "すみません",
+      "accent": [
+        4
+      ],
+      "meaning": "對不起／抱歉",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-007",
+      "word": "ちょっと",
+      "reading": "ちょっと",
+      "accent": [
+        1
+      ],
+      "meaning": "一下子／一會兒",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-008",
+      "word": "いいですよ",
+      "reading": "いいですよ",
+      "accent": [],
+      "meaning": "可以啊（表允許）",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-009",
+      "word": "手伝う",
+      "reading": "てつだう",
+      "accent": [
+        3
+      ],
+      "meaning": "幫忙／幫助",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-010",
+      "word": "意味",
+      "reading": "いみ",
+      "accent": [
+        1
+      ],
+      "meaning": "意思",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-011",
+      "word": "地図",
+      "reading": "ちず",
+      "accent": [
+        1
+      ],
+      "meaning": "地圖",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-012",
+      "word": "持つ",
+      "reading": "もつ",
+      "accent": [
+        1
+      ],
+      "meaning": "持／拿",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-013",
+      "word": "塩",
+      "reading": "しお",
+      "accent": [
+        2
+      ],
+      "meaning": "鹽",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-014",
+      "word": "取る",
+      "reading": "とる",
+      "accent": [
+        1
+      ],
+      "meaning": "拿／取",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-015",
+      "word": "ドア",
+      "reading": "ドア",
+      "accent": [
+        1
+      ],
+      "meaning": "門",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-016",
+      "word": "開ける",
+      "reading": "あける",
+      "accent": [
+        0
+      ],
+      "meaning": "開／打開",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-017",
+      "word": "どうぞ",
+      "reading": "どうぞ",
+      "accent": [
+        1
+      ],
+      "meaning": "請",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-018",
+      "word": "置く",
+      "reading": "おく",
+      "accent": [
+        0
+      ],
+      "meaning": "放／放置",
+      "section": "文型１",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-019",
+      "word": "〜方",
+      "reading": "かた",
+      "accent": [
+        2
+      ],
+      "meaning": "接尾語（表動作的方法）",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-020",
+      "word": "切符",
+      "reading": "きっぷ",
+      "accent": [
+        0
+      ],
+      "meaning": "（火車）票",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-021",
+      "word": "箸",
+      "reading": "はし",
+      "accent": [
+        1
+      ],
+      "meaning": "筷子",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-022",
+      "word": "発音（する）",
+      "reading": "はつおん",
+      "accent": [
+        0
+      ],
+      "meaning": "發音",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-023",
+      "word": "コピー（する）",
+      "reading": "コピー",
+      "accent": [
+        1
+      ],
+      "meaning": "拷貝／影印【英 copy】",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-024",
+      "word": "【コピーを】取る",
+      "reading": "とる",
+      "accent": [],
+      "meaning": "拿／取",
+      "section": "文型２",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-025",
+      "word": "分かる",
+      "reading": "わかる",
+      "accent": [
+        2
+      ],
+      "meaning": "了解",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-026",
+      "word": "休む",
+      "reading": "やすむ",
+      "accent": [
+        2
+      ],
+      "meaning": "休息",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-027",
+      "word": "授業を休む",
+      "reading": "じゅぎょうをやすむ",
+      "accent": [],
+      "meaning": "缺席",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-028",
+      "word": "呼ぶ",
+      "reading": "よぶ",
+      "accent": [
+        0
+      ],
+      "meaning": "叫／稱為",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-029",
+      "word": "使う",
+      "reading": "つかう",
+      "accent": [
+        0
+      ],
+      "meaning": "使用",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-030",
+      "word": "忘れる",
+      "reading": "わすれる",
+      "accent": [
+        0
+      ],
+      "meaning": "忘記",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-031",
+      "word": "遅れる",
+      "reading": "おくれる",
+      "accent": [
+        0
+      ],
+      "meaning": "遲到",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-032",
+      "word": "聞く",
+      "reading": "きく",
+      "accent": [
+        0
+      ],
+      "meaning": "問／詢問",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-033",
+      "word": "心配（する）",
+      "reading": "しんぱい",
+      "accent": [
+        0
+      ],
+      "meaning": "擔心",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-034",
+      "word": "みんな",
+      "reading": "みんな",
+      "accent": [
+        3
+      ],
+      "meaning": "大家",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-035",
+      "word": "言う",
+      "reading": "いう",
+      "accent": [
+        0
+      ],
+      "meaning": "說",
+      "section": "文型３",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-036",
+      "word": "だから",
+      "reading": "だから",
+      "accent": [
+        1
+      ],
+      "meaning": "接續詞－表原因、理由",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-037",
+      "word": "…から",
+      "reading": "から",
+      "accent": [
+        1
+      ],
+      "meaning": "接續助詞－表原因、理由",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-038",
+      "word": "持って来る",
+      "reading": "もってくる",
+      "accent": [
+        4
+      ],
+      "meaning": "帶來／拿來",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-039",
+      "word": "タバコ",
+      "reading": "タバコ",
+      "accent": [
+        0
+      ],
+      "meaning": "香菸【葡 Tabaco】",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-040",
+      "word": "吸う",
+      "reading": "すう",
+      "accent": [
+        0
+      ],
+      "meaning": "吸",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-041",
+      "word": "タバコを吸う",
+      "reading": "タバコをすう",
+      "accent": [],
+      "meaning": "抽菸",
+      "section": "文型４",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-042",
+      "word": "返す",
+      "reading": "かえす",
+      "accent": [
+        1
+      ],
+      "meaning": "歸還",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-043",
+      "word": "迎える［迎えに行く］",
+      "reading": "むかえる",
+      "accent": [
+        0
+      ],
+      "meaning": "迎接",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-044",
+      "word": "フランス",
+      "reading": "フランス",
+      "accent": [
+        0
+      ],
+      "meaning": "法國【法 France】",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-045",
+      "word": "文学",
+      "reading": "ぶんがく",
+      "accent": [
+        1
+      ],
+      "meaning": "文學",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-046",
+      "word": "研究（する）",
+      "reading": "けんきゅう",
+      "accent": [
+        0
+      ],
+      "meaning": "研究／鑽研",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-047",
+      "word": "イギリス",
+      "reading": "イギリス",
+      "accent": [
+        0
+      ],
+      "meaning": "英國【葡 Inglez】",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-048",
+      "word": "原宿",
+      "reading": "はらじゅく",
+      "accent": [
+        0
+      ],
+      "meaning": "原宿（地名）",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-049",
+      "word": "日光",
+      "reading": "にっこう",
+      "accent": [
+        1
+      ],
+      "meaning": "日光（地名）",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l9-050",
+      "word": "どうですか",
+      "reading": "どうですか",
+      "accent": [
+        1
+      ],
+      "meaning": "怎麼樣？",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": []
+    },
+    {
+      "id": "l9-051",
+      "word": "大丈夫な",
+      "reading": "だいじょうぶな",
+      "accent": [
+        3
+      ],
+      "meaning": "沒問題的",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l9-052",
+      "word": "よかった",
+      "reading": "よかった",
+      "accent": [
+        1
+      ],
+      "meaning": "那就好",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l9-053",
+      "word": "調べる",
+      "reading": "しらべる",
+      "accent": [
+        3
+      ],
+      "meaning": "調查",
+      "section": "文型５",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-054",
+      "word": "試験をする",
+      "reading": "しけん",
+      "accent": [
+        2
+      ],
+      "meaning": "進行考試",
+      "section": "会話",
+      "lesson": 9,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l9-055",
+      "word": "大切な",
+      "reading": "たいせつな",
+      "accent": [
+        0
+      ],
+      "meaning": "重要的",
+      "section": "会話",
+      "lesson": 9,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l9-056",
+      "word": "覚える",
+      "reading": "おぼえる",
+      "accent": [
+        3
+      ],
+      "meaning": "記下／記住",
+      "section": "会話",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l9-057",
+      "word": "頑張る",
+      "reading": "がんばる",
+      "accent": [
+        3
+      ],
+      "meaning": "全力以赴／加油",
+      "section": "会話",
+      "lesson": 9,
+      "tags": [
+        "動詞"
+      ]
+    }
+  ]
+}

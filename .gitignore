@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Local Claude Code settings (machine-specific permissions)
+.claude/settings.local.json
+
+# Source vocabulary PDFs — large binaries; the extracted JSON in src/data/ is
+# the source of truth. Remove this line if you want to track the originals.
+*単語.pdf
+
+# OS / editor cruft
+.DS_Store
+*.local
+*.log
+.vscode/
+.idea/

@@ -1,0 +1,1025 @@
+{
+  "lesson": 11,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "11単語.pdf",
+  "words": [
+    {
+      "id": "l11-001",
+      "word": "入れる",
+      "reading": "いれる",
+      "accent": [
+        0
+      ],
+      "meaning": "放入",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-002",
+      "word": "かける",
+      "reading": "かける",
+      "accent": [
+        2
+      ],
+      "meaning": "掛／掛上",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-003",
+      "word": "載せる",
+      "reading": "のせる",
+      "accent": [
+        0
+      ],
+      "meaning": "放／放置（高處）",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-004",
+      "word": "壁",
+      "reading": "かべ",
+      "accent": [
+        0
+      ],
+      "meaning": "牆壁",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-005",
+      "word": "砂糖",
+      "reading": "さとう",
+      "accent": [
+        2
+      ],
+      "meaning": "砂糖",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-006",
+      "word": "シャツ",
+      "reading": "シャツ",
+      "accent": [
+        1
+      ],
+      "meaning": "襯衫",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-007",
+      "word": "出す",
+      "reading": "だす",
+      "accent": [
+        1
+      ],
+      "meaning": "拿出／取出",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-008",
+      "word": "ミルク",
+      "reading": "ミルク",
+      "accent": [
+        1
+      ],
+      "meaning": "牛奶",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-009",
+      "word": "袋",
+      "reading": "ふくろ",
+      "accent": [
+        3
+      ],
+      "meaning": "袋子",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-010",
+      "word": "書類",
+      "reading": "しょるい",
+      "accent": [
+        0
+      ],
+      "meaning": "文件／資料",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-011",
+      "word": "ゆで卵",
+      "reading": "ゆでたまご",
+      "accent": [
+        3
+      ],
+      "meaning": "水煮蛋",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-012",
+      "word": "鍋",
+      "reading": "なべ",
+      "accent": [
+        1
+      ],
+      "meaning": "鍋子",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-013",
+      "word": "ゆでる",
+      "reading": "ゆでる",
+      "accent": [
+        2
+      ],
+      "meaning": "煮／燙",
+      "section": "",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-014",
+      "word": "住む",
+      "reading": "すむ",
+      "accent": [
+        1
+      ],
+      "meaning": "居住",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-015",
+      "word": "持っている",
+      "reading": "もっている",
+      "accent": [
+        1
+      ],
+      "meaning": "擁有",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-016",
+      "word": "知る",
+      "reading": "しる",
+      "accent": [
+        0
+      ],
+      "meaning": "知道",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-017",
+      "word": "番号",
+      "reading": "ばんごう",
+      "accent": [
+        3
+      ],
+      "meaning": "號碼",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-018",
+      "word": "警察",
+      "reading": "けいさつ",
+      "accent": [
+        0
+      ],
+      "meaning": "警察",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-019",
+      "word": "スター",
+      "reading": "スター",
+      "accent": [
+        2
+      ],
+      "meaning": "明星（電影明星）",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-020",
+      "word": "働く",
+      "reading": "はたらく",
+      "accent": [
+        0
+      ],
+      "meaning": "工作",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-021",
+      "word": "小学校",
+      "reading": "しょうがっこう",
+      "accent": [
+        3
+      ],
+      "meaning": "小學",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-022",
+      "word": "〜年生",
+      "reading": "ねんせい",
+      "accent": [
+        1
+      ],
+      "meaning": "～年級",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-023",
+      "word": "経済学",
+      "reading": "けいざいがく",
+      "accent": [
+        3
+      ],
+      "meaning": "經濟學",
+      "section": "文型１",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-024",
+      "word": "もう",
+      "reading": "もう",
+      "accent": [
+        1
+      ],
+      "meaning": "已經",
+      "section": "文型２",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-025",
+      "word": "まだ",
+      "reading": "まだ",
+      "accent": [
+        1
+      ],
+      "meaning": "尚／未／還沒",
+      "section": "文型２",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-026",
+      "word": "払う",
+      "reading": "はらう",
+      "accent": [
+        2
+      ],
+      "meaning": "支付／繳交（金錢）",
+      "section": "文型２",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-027",
+      "word": "〜後で",
+      "reading": "あとで",
+      "accent": [
+        1
+      ],
+      "meaning": "～之後",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-028",
+      "word": "〜ずつ",
+      "reading": "ずつ",
+      "accent": [
+        1
+      ],
+      "meaning": "接尾語－表均攤之意",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-029",
+      "word": "正しい",
+      "reading": "ただしい",
+      "accent": [
+        3
+      ],
+      "meaning": "正確的／對的",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l11-030",
+      "word": "答え",
+      "reading": "こたえ",
+      "accent": [
+        2
+      ],
+      "meaning": "回答",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-031",
+      "word": "思い出す",
+      "reading": "おもいだす",
+      "accent": [
+        4
+      ],
+      "meaning": "想起／記起",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-032",
+      "word": "チェック（する）",
+      "reading": "チェック",
+      "accent": [
+        1
+      ],
+      "meaning": "檢查／核對",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-033",
+      "word": "録音（する）",
+      "reading": "ろくおん",
+      "accent": [
+        0
+      ],
+      "meaning": "錄音",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-034",
+      "word": "もう一度",
+      "reading": "もういちど",
+      "accent": [
+        0
+      ],
+      "meaning": "再一次",
+      "section": "文型３",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-035",
+      "word": "おはようございます",
+      "reading": "おはようございます",
+      "accent": [
+        8
+      ],
+      "meaning": "早安",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-036",
+      "word": "こんにちは",
+      "reading": "こんにちは",
+      "accent": [
+        0
+      ],
+      "meaning": "午安",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-037",
+      "word": "こんばんは",
+      "reading": "こんばんは",
+      "accent": [
+        0
+      ],
+      "meaning": "晚上好",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-038",
+      "word": "さようなら",
+      "reading": "さようなら",
+      "accent": [
+        0
+      ],
+      "meaning": "再見",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-039",
+      "word": "留学生",
+      "reading": "りゅうがくせい",
+      "accent": [
+        3
+      ],
+      "meaning": "留學生",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-040",
+      "word": "サークル",
+      "reading": "サークル",
+      "accent": [
+        1
+      ],
+      "meaning": "社團",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-041",
+      "word": "書道部",
+      "reading": "しょどうぶ",
+      "accent": [
+        2
+      ],
+      "meaning": "書法社",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-042",
+      "word": "もちろん",
+      "reading": "もちろん",
+      "accent": [
+        2
+      ],
+      "meaning": "當然",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-043",
+      "word": "いつも",
+      "reading": "いつも",
+      "accent": [
+        1
+      ],
+      "meaning": "通常／經常",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-044",
+      "word": "他の",
+      "reading": "ほかの",
+      "accent": [
+        0
+      ],
+      "meaning": "其他的",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-045",
+      "word": "〜たち",
+      "reading": "たち",
+      "accent": [],
+      "meaning": "〜們／〜等人（接尾語）",
+      "section": "文型４",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-046",
+      "word": "ビザ",
+      "reading": "ビザ",
+      "accent": [
+        1
+      ],
+      "meaning": "簽證",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-047",
+      "word": "取る",
+      "reading": "とる",
+      "accent": [
+        1
+      ],
+      "meaning": "拿到／取得（簽證）",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-048",
+      "word": "大使館",
+      "reading": "たいしかん",
+      "accent": [
+        3
+      ],
+      "meaning": "大使館",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-049",
+      "word": "ノック（する）",
+      "reading": "ノック",
+      "accent": [
+        1
+      ],
+      "meaning": "敲（門）",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-050",
+      "word": "連絡（する）",
+      "reading": "れんらく",
+      "accent": [
+        0
+      ],
+      "meaning": "聯絡",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-051",
+      "word": "初めて",
+      "reading": "はじめて",
+      "accent": [
+        2
+      ],
+      "meaning": "第一次",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-052",
+      "word": "いただきます",
+      "reading": "いただきます",
+      "accent": [
+        5
+      ],
+      "meaning": "開動了",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-053",
+      "word": "ご馳走様でした",
+      "reading": "ごちそうさまでした",
+      "accent": [
+        7
+      ],
+      "meaning": "謝謝款待",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-054",
+      "word": "おやすみなさい",
+      "reading": "おやすみなさい",
+      "accent": [
+        6
+      ],
+      "meaning": "晚安",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-055",
+      "word": "ただいま",
+      "reading": "ただいま",
+      "accent": [
+        0
+      ],
+      "meaning": "我回來了",
+      "section": "文型５",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-056",
+      "word": "思う",
+      "reading": "おもう",
+      "accent": [
+        2
+      ],
+      "meaning": "想／認為／覺得",
+      "section": "文型６",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-057",
+      "word": "〜について",
+      "reading": "について",
+      "accent": [],
+      "meaning": "關於...",
+      "section": "文型６",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-058",
+      "word": "こと",
+      "reading": "こと",
+      "accent": [
+        2
+      ],
+      "meaning": "事／事情",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-059",
+      "word": "ジョギング（する）",
+      "reading": "ジョギング",
+      "accent": [
+        0
+      ],
+      "meaning": "慢跑",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-060",
+      "word": "洗濯（する）",
+      "reading": "せんたく",
+      "accent": [
+        0
+      ],
+      "meaning": "洗／洗滌",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-061",
+      "word": "掃除（する）",
+      "reading": "そうじ",
+      "accent": [
+        0
+      ],
+      "meaning": "清掃",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l11-062",
+      "word": "開く",
+      "reading": "あく",
+      "accent": [
+        0
+      ],
+      "meaning": "開",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-063",
+      "word": "閉まる",
+      "reading": "しまる",
+      "accent": [
+        2
+      ],
+      "meaning": "關",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-064",
+      "word": "赤ちゃん",
+      "reading": "あかちゃん",
+      "accent": [
+        1
+      ],
+      "meaning": "嬰兒",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-065",
+      "word": "泣く",
+      "reading": "なく",
+      "accent": [
+        0
+      ],
+      "meaning": "哭",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-066",
+      "word": "笑う",
+      "reading": "わらう",
+      "accent": [
+        0
+      ],
+      "meaning": "笑",
+      "section": "文型７",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-067",
+      "word": "分かりました",
+      "reading": "わかりました",
+      "accent": [
+        4
+      ],
+      "meaning": "知道了",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-068",
+      "word": "楽しみにしています",
+      "reading": "たのしみにしています",
+      "accent": [
+        3
+      ],
+      "meaning": "很期待",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l11-069",
+      "word": "色々な",
+      "reading": "いろいろな",
+      "accent": [
+        0
+      ],
+      "meaning": "各式各樣的",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l11-070",
+      "word": "もの",
+      "reading": "もの",
+      "accent": [
+        2
+      ],
+      "meaning": "東西（有形的）",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-071",
+      "word": "売る",
+      "reading": "うる",
+      "accent": [
+        0
+      ],
+      "meaning": "賣／販賣",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l11-072",
+      "word": "もうすぐ",
+      "reading": "もうすぐ",
+      "accent": [
+        3
+      ],
+      "meaning": "馬上",
+      "section": "会話",
+      "lesson": 11,
+      "tags": []
+    },
+    {
+      "id": "l11-073",
+      "word": "（お）神輿",
+      "reading": "（お）みこし",
+      "accent": [
+        0
+      ],
+      "meaning": "神轎",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l11-074",
+      "word": "今度",
+      "reading": "こんど",
+      "accent": [
+        1
+      ],
+      "meaning": "下次／下回",
+      "section": "会話",
+      "lesson": 11,
+      "tags": [
+        "名詞"
+      ]
+    }
+  ]
+}

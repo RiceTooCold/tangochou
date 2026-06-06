@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>単語帳 — 頁面設計 Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* Status — Forest Green */
+    --g800:#1a3a2a; --g700:#235132; --g100:#e6f0e9; --g50:#f1f7f3;
+    /* Status — Vermilion Red */
+    --r800:#6e1313; --r700:#8f1f1f; --r100:#f5e8e8; --r50:#faf3f3;
+    /* Primary — Warm Gray */
+    --blk:#141412; --gr8:#2c2a28; --gr6:#4a4845; --gr4:#7d7b76;
+    --gr2:#c5c3be; --gr1:#e4e2dd; --gr0:#f2f0eb; --wht:#f8f7f3;
+
+    --radius-sm:4px; --radius-md:8px; --radius-lg:12px;
+
+    --sans:'Noto Sans JP', sans-serif;
+    --serif:'Noto Serif JP', serif;
+  }
+
+  * { box-sizing:border-box; margin:0; padding:0; -webkit-font-smoothing:antialiased; }
+
+  body {
+    font-family:var(--sans);
+    background:#e9e6df;
+    background-image:radial-gradient(circle at 1px 1px, rgba(20,20,18,.05) 1px, transparent 0);
+    background-size:22px 22px;
+    color:var(--gr6);
+    padding:48px 24px 96px;
+    min-height:100vh;
+  }
+
+  /* ── Gallery scaffolding ───────────────────────────── */
+  .lab-head { max-width:1180px; margin:0 auto 44px; }
+  .lab-eyebrow { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gr4); font-weight:500; }
+  .lab-title { font-family:var(--serif); font-weight:600; font-size:34px; color:var(--blk); margin-top:10px; letter-spacing:.02em; }
+  .lab-sub { font-size:14px; color:var(--gr6); margin-top:10px; max-width:560px; line-height:1.7; }
+
+  .tokens { display:flex; gap:18px; flex-wrap:wrap; margin-top:22px; align-items:center; }
+  .swatch { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--gr6); }
+  .swatch i { width:16px; height:16px; border-radius:5px; display:block; border:.5px solid rgba(0,0,0,.08); }
+  .tk-divider { width:1px; height:18px; background:var(--gr2); }
+
+  .gallery {
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));
+    gap:52px 40px; align-items:start;
+  }
+
+  .frame-wrap { display:flex; flex-direction:column; gap:14px; }
+  .frame-cap { display:flex; align-items:baseline; gap:10px; padding-left:4px; }
+  .frame-cap h3 { font-size:14px; color:var(--blk); font-weight:500; }
+  .frame-cap .ja { font-family:var(--serif); color:var(--gr4); font-size:13px; }
+  .pri { margin-left:auto; font-size:10px; letter-spacing:.08em; font-weight:600; padding:2px 7px; border-radius:var(--radius-sm); }
+  .pri.p0 { background:var(--blk); color:var(--wht); }
+  .pri.p1 { background:var(--gr1); color:var(--gr6); }
+  .pri.p2 { background:transparent; color:var(--gr4); border:.5px solid var(--gr2); }
+
+  /* phone */
+  .phone {
+    width:100%; max-width:380px; background:var(--blk);
+    border-radius:30px; padding:8px;
+    box-shadow:0 1px 1px rgba(0,0,0,.04), 0 14px 28px -12px rgba(20,20,18,.32);
+  }
+  .screen {
+    background:var(--wht); border-radius:23px; overflow:hidden;
+    height:720px; display:flex; flex-direction:column; position:relative;
+  }
+  .statusbar { height:34px; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; padding:0 22px 0 24px; font-size:12px; color:var(--blk); font-weight:500; }
+  .statusbar .dots { display:flex; gap:4px; align-items:center; }
+  .statusbar .dots b { width:5px; height:5px; border-radius:50%; background:var(--blk); display:block; }
+  .body { flex:1 1 auto; overflow:hidden; display:flex; flex-direction:column; }
+
+  /* ── Shared UI atoms (mirror design-system.md) ─────── */
+  .appbar { display:flex; align-items:center; gap:12px; padding:6px 18px 14px; }
+  .appbar .ic { width:30px; height:30px; display:flex; align-items:center; justify-content:center; font-size:18px; color:var(--gr6); margin-left:-6px; }
+  .appbar h2 { font-size:16px; color:var(--blk); font-weight:600; }
+  .appbar .count { margin-left:auto; font-size:13px; color:var(--gr4); font-variant-numeric:tabular-nums; }
+
+  .badge { display:inline-flex; align-items:center; padding:3px 10px; border-radius:var(--radius-sm); font-size:11px; font-weight:500; letter-spacing:.04em; }
+  .badge.sec { background:var(--gr1); color:var(--gr6); }
+  .badge.known { background:var(--g100); color:var(--g700); }
+  .badge.unknown { background:var(--r100); color:var(--r700); }
+  .badge.unseen { border:.5px solid var(--gr2); color:var(--gr6); }
+  .badge.pos { background:transparent; border:.5px solid var(--gr2); color:var(--gr4); font-size:10px; letter-spacing:.02em; }
+
+  .btn { height:44px; border:none; border-radius:var(--radius-md); font-family:var(--sans); font-size:14px; font-weight:500; display:inline-flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; width:100%; }
+  .btn.primary { background:var(--blk); color:var(--wht); }
+  .btn.ghost { background:transparent; border:.5px solid var(--gr2); color:var(--gr6); }
+  .btn.outline { background:transparent; border:1.5px solid var(--blk); color:var(--blk); }
+  .btn.know { background:var(--g800); color:var(--wht); }
+  .btn.dont { background:var(--r800); color:var(--wht); }
+
+  .pbar { height:5px; background:var(--gr1); border-radius:99px; overflow:hidden; }
+  .pbar > i { display:block; height:100%; background:var(--blk); border-radius:99px; }
+
+  .chip { padding:7px 14px; border-radius:99px; font-size:13px; font-weight:500; border:.5px solid var(--gr2); color:var(--gr6); background:transparent; white-space:nowrap; cursor:pointer; }
+  .chip.on { background:var(--blk); color:var(--wht); border-color:var(--blk); }
+  .chiprow { display:flex; gap:8px; overflow-x:auto; padding:2px 18px; scrollbar-width:none; }
+  .chiprow::-webkit-scrollbar { display:none; }
+
+  .scroll { overflow-y:auto; flex:1; }
+  .scroll::-webkit-scrollbar { width:0; }
+  /* fills remaining height and vertically centers question content */
+  .vcenter { flex:1; display:flex; flex-direction:column; justify-content:center; }
+
+  /* ── HOME ──────────────────────────────────────────── */
+  .home-hero { padding:8px 22px 20px; }
+  .home-hero .brand { font-family:var(--serif); font-size:30px; font-weight:600; color:var(--blk); letter-spacing:.04em; }
+  .home-hero .tag { font-size:12px; color:var(--gr4); margin-top:6px; letter-spacing:.04em; }
+
+  .stat-card { margin:0 18px; background:var(--gr0); border:.5px solid var(--gr1); border-radius:var(--radius-lg); padding:18px 18px 16px; }
+  .stat-card .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--gr4); font-weight:500; }
+  .stat-card .big { font-family:var(--serif); font-size:30px; color:var(--blk); margin-top:6px; font-weight:600; }
+  .stat-card .big small { font-family:var(--sans); font-size:14px; color:var(--gr4); font-weight:400; }
+  .stat-card .pbar { margin-top:14px; }
+  .stat-meta { display:flex; gap:14px; margin-top:10px; font-size:11px; color:var(--gr6); }
+  .stat-meta span { display:flex; align-items:center; gap:5px; }
+  .dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+  .dot.k { background:var(--g700); } .dot.u { background:var(--r700); } .dot.n { background:var(--gr2); }
+
+  .sec-label { font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--gr4); font-weight:500; padding:22px 22px 10px; }
+
+  .mode-row { display:flex; align-items:center; gap:14px; margin:0 18px 10px; padding:15px 16px; border:.5px solid var(--gr1); border-radius:var(--radius-md); background:var(--wht); cursor:pointer; transition:border-color .15s; }
+  .mode-row:hover { border-color:var(--gr2); }
+  .mode-row .gly { font-family:var(--serif); font-size:20px; color:var(--blk); width:30px; text-align:center; }
+  .mode-row .txt b { display:block; font-size:14px; color:var(--blk); font-weight:500; }
+  .mode-row .txt span { font-size:12px; color:var(--gr4); }
+  .mode-row .arr { margin-left:auto; color:var(--gr2); font-size:18px; }
+
+  /* ── FLASHCARD ─────────────────────────────────────── */
+  .fc-opts { display:flex; gap:8px; padding:2px 18px 6px; }
+  .fc-opts .seg { flex:1; display:flex; background:var(--gr0); border-radius:var(--radius-md); padding:3px; }
+  .fc-opts .seg button { flex:1; border:none; background:transparent; font-family:var(--sans); font-size:12px; color:var(--gr4); padding:6px 0; border-radius:6px; cursor:pointer; }
+  .fc-opts .seg button.on { background:var(--wht); color:var(--blk); font-weight:500; box-shadow:0 1px 2px rgba(0,0,0,.05); }
+
+  .fc-stage { flex:1; display:flex; align-items:center; justify-content:center; padding:18px 22px; perspective:1200px; }
+  .card3d { width:100%; height:300px; position:relative; transform-style:preserve-3d; transition:transform .35s ease; cursor:pointer; }
+  .card3d.flip { transform:rotateY(180deg); }
+  .face { position:absolute; inset:0; backface-visibility:hidden; border-radius:var(--radius-lg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:24px; }
+  .face.front { background:var(--wht); border:.5px solid var(--gr1); box-shadow:0 1px 2px rgba(0,0,0,.03); }
+  .face.back { background:var(--gr0); transform:rotateY(180deg); border:.5px solid var(--gr1); }
+  .face .accent { font-size:13px; color:var(--gr4); letter-spacing:.1em; }
+  .face .kanji { font-family:var(--serif); font-size:46px; font-weight:600; color:var(--blk); letter-spacing:.04em; }
+  .face .reading { font-size:19px; color:var(--gr4); }
+  .face .meaning { font-size:16px; color:var(--blk); font-weight:500; }
+  .face .hint { position:absolute; bottom:16px; font-size:11px; color:var(--gr4); letter-spacing:.05em; }
+  .fc-foot { padding:14px 18px 20px; }
+  .fc-grade { display:flex; gap:12px; }
+  .fc-grade .btn { flex:1; }
+
+  /* ── QUIZ ──────────────────────────────────────────── */
+  .quiz-q { padding:26px 22px 22px; text-align:center; }
+  .q-eyebrow { font-size:12px; color:var(--gr4); letter-spacing:.05em; }
+  .quiz-q .subject { font-family:var(--serif); font-size:36px; color:var(--blk); font-weight:600; letter-spacing:.04em; line-height:1.1; margin-top:10px; }
+  .opt { position:relative; padding:14px 16px; border-radius:var(--radius-md); border:.5px solid var(--gr2); margin:0 18px 10px; font-size:15px; color:var(--gr8); display:flex; align-items:baseline; justify-content:center; gap:10px; cursor:pointer; }
+  .opt .k { font-family:var(--serif); font-size:17px; color:var(--blk); }
+  .opt .rd { color:var(--gr4); font-size:13px; }
+  .opt .mk { position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:15px; }
+  .opt.correct { border-color:var(--g700); background:var(--g50); color:var(--g700); }
+  .opt.correct .k, .opt.correct .rd, .opt.correct .mk { color:var(--g700); }
+  .opt.wrong { border-color:var(--r700); background:var(--r50); color:var(--r700); }
+  .opt.wrong .k, .opt.wrong .rd, .opt.wrong .mk { color:var(--r700); }
+  .timer-top { display:inline-flex; align-items:center; gap:5px; font-size:12px; color:var(--gr6); font-variant-numeric:tabular-nums; }
+  .timer-top .ring { width:12px; height:12px; border-radius:50%; border:2px solid var(--gr2); border-top-color:var(--blk); }
+  .timer-row { display:flex; justify-content:flex-end; padding:8px 10px 0 0; }
+  .timer-row { display:flex; justify-content:center; margin-top:12px; }
+
+  /* ── TYPING ────────────────────────────────────────── */
+  .ty-q { padding:30px 22px 8px; text-align:center; }
+  .ty-q .meaning { font-family:var(--serif); font-size:36px; color:var(--blk); font-weight:600; margin-top:10px; }
+  .ty-q .ask { margin-top:14px; }
+  .ty-field { margin:24px 18px 0; }
+  .input { height:44px; border:.5px solid var(--gr2); border-radius:var(--radius-md); padding:0 14px; font-size:15px; background:var(--wht); width:100%; font-family:var(--sans); color:var(--blk); display:flex; align-items:center; justify-content:center; text-align:center; }
+  .input.focus { border-color:var(--blk); box-shadow:0 0 0 3px var(--gr1); }
+  .input .caret { width:1.5px; height:20px; background:var(--blk); margin-left:1px; animation:blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+  .input .ph { color:var(--gr4); }
+  .reveal { margin:18px 18px 0; padding:16px; border-radius:var(--radius-md); background:var(--g50); border:.5px solid var(--g100); text-align:center; }
+  .reveal .ok { font-size:11px; color:var(--g700); font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+  .reveal .row { display:flex; align-items:baseline; justify-content:center; gap:12px; margin-top:10px; }
+  .reveal .row .k { font-family:var(--serif); font-size:26px; color:var(--blk); font-weight:600; }
+  .reveal .row .r { font-size:14px; color:var(--gr4); }
+  .reveal .row .m { font-size:14px; color:var(--gr6); }
+
+  /* ── WORD LIST ─────────────────────────────────────── */
+  .search { margin:2px 18px 12px; height:40px; border:.5px solid var(--gr2); border-radius:var(--radius-md); display:flex; align-items:center; gap:9px; padding:0 13px; background:var(--wht); }
+  .search svg { flex:0 0 auto; }
+  .search .ph { font-size:14px; color:var(--gr4); }
+  .grp-head { display:flex; align-items:center; gap:10px; padding:16px 20px 8px; }
+  .grp-head .badge { }
+  .grp-head .ct { font-size:11px; color:var(--gr4); }
+  .wrow { display:flex; align-items:center; gap:13px; padding:12px 20px; border-bottom:.5px solid var(--gr1); }
+  .wrow .pdot { width:8px; height:8px; border-radius:50%; flex:0 0 auto; }
+  .wrow .w { display:flex; flex-direction:column; gap:2px; min-width:0; }
+  .wrow .w .top { display:flex; align-items:baseline; gap:9px; }
+  .wrow .w .k { font-family:var(--serif); font-size:17px; color:var(--blk); font-weight:500; }
+  .wrow .w .rd { font-size:12px; color:var(--gr4); }
+  .wrow .w .mn { font-size:12.5px; color:var(--gr6); }
+  .wrow .st { margin-left:auto; }
+
+  .foot-note { max-width:1180px; margin:56px auto 0; font-size:12.5px; color:var(--gr6); line-height:1.8; border-top:.5px solid var(--gr2); padding-top:20px; }
+  .foot-note b { color:var(--blk); font-weight:500; }
+  .foot-note code { font-family:ui-monospace, monospace; font-size:11.5px; background:rgba(20,20,18,.05); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+  <header class="lab-head">
+    <div class="lab-eyebrow">Design Sync · Mockup Prototype</div>
+    <h1 class="lab-title">単語帳 — 五個頁面</h1>
+    <p class="lab-sub">開工前的靜態 mockup。忠實套用 <code style="font-family:ui-monospace,monospace;font-size:12px">design-system.md</code> 的 token：暖白底、灰階 UI、綠／紅只在「狀態語義」出現、Noto Serif JP 作漢字錨點。閃卡可點擊翻面。確認沒問題就照這個搭 React。</p>
+    <div class="tokens">
+      <div class="swatch"><i style="background:#f8f7f3"></i>底 wht</div>
+      <div class="swatch"><i style="background:#141412"></i>UI blk</div>
+      <div class="swatch"><i style="background:#7d7b76"></i>muted</div>
+      <div class="swatch"><i style="background:#c5c3be"></i>border</div>
+      <span class="tk-divider"></span>
+      <div class="swatch"><i style="background:#235132"></i>認識 green</div>
+      <div class="swatch"><i style="background:#8f1f1f"></i>不熟 red</div>
+      <span class="tk-divider"></span>
+      <div class="swatch" style="font-family:var(--serif)">明 Serif JP</div>
+      <div class="swatch">あ Sans JP</div>
+    </div>
+  </header>
+
+  <div class="gallery">
+
+    <!-- ════════ 1. HOME ════════ -->
+    <div class="frame-wrap">
+      <div class="frame-cap"><h3>首頁</h3><span class="ja">HomeScreen</span><span class="pri p0">P0</span></div>
+      <div class="phone"><div class="screen">
+        <div class="statusbar"><span>9:41</span><span class="dots"><b></b><b></b><b style="background:var(--gr2)"></b></span></div>
+        <div class="body">
+          <div class="scroll">
+            <div class="home-hero">
+              <div class="brand">単語帳</div>
+              <div class="tag">日文單字練習 · 第 7–12 課</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="lbl">總進度</div>
+              <div class="big">124 <small>/ 413 個認識</small></div>
+              <div class="pbar"><i style="width:30%"></i></div>
+              <div class="stat-meta">
+                <span><i class="dot k"></i>認識 124</span>
+                <span><i class="dot u"></i>不熟 38</span>
+                <span><i class="dot n"></i>未見 251</span>
+              </div>
+            </div>
+
+            <div class="sec-label">課別</div>
+            <div class="chiprow">
+              <button class="chip on">全部</button>
+              <button class="chip">第7課</button>
+              <button class="chip">第8課</button>
+              <button class="chip">第9課</button>
+              <button class="chip">第10課</button>
+              <button class="chip">第11課</button>
+            </div>
+
+            <div class="sec-label">練習模式</div>
+            <div class="mode-row">
+              <span class="gly">札</span>
+              <span class="txt"><b>閃卡</b><span>看日文翻面對讀音與意思</span></span>
+              <span class="arr">›</span>
+            </div>
+            <div class="mode-row">
+              <span class="gly">選</span>
+              <span class="txt"><b>選擇題</b><span>四選一，可開 15 秒倒數</span></span>
+              <span class="arr">›</span>
+            </div>
+            <div class="mode-row">
+              <span class="gly">書</span>
+              <span class="txt"><b>默寫</b><span>看中文輸入漢字或讀音</span></span>
+              <span class="arr">›</span>
+            </div>
+
+            <div class="sec-label">瀏覽</div>
+            <div class="mode-row" style="margin-bottom:20px">
+              <span class="gly">表</span>
+              <span class="txt"><b>單字列表</b><span>依文型分組 · 搜尋 · 篩選</span></span>
+              <span class="arr">›</span>
+            </div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ════════ 2. FLASHCARD ════════ -->
+    <div class="frame-wrap">
+      <div class="frame-cap"><h3>閃卡</h3><span class="ja">FlashcardMode</span><span class="pri p0">P0</span></div>
+      <div class="phone"><div class="screen">
+        <div class="statusbar"><span>9:41</span><span class="dots"><b></b><b></b><b style="background:var(--gr2)"></b></span></div>
+        <div class="body">
+          <div class="appbar">
+            <span class="ic">‹</span>
+            <h2>閃卡</h2>
+            <span class="count">3 / 95</span>
+          </div>
+          <div style="padding:0 18px 12px"><div class="pbar"><i style="width:3.2%"></i></div></div>
+          <div class="fc-opts">
+            <div class="seg">
+              <button class="on">日 → 中</button>
+              <button>中 → 日</button>
+            </div>
+            <div class="seg" style="flex:0 0 auto">
+              <button class="on">聲調 ✓</button>
+            </div>
+          </div>
+
+          <div class="fc-stage">
+            <div class="card3d" onclick="this.classList.toggle('flip')">
+              <div class="face front">
+                <div class="accent">⓪　平板型</div>
+                <div class="kanji">座る</div>
+                <div class="hint">點擊翻面 · 顯示讀音與意思</div>
+              </div>
+              <div class="face back">
+                <div class="reading">すわる</div>
+                <div class="meaning">坐</div>
+                <span class="badge sec" style="position:absolute;top:18px;left:18px">文型１</span>
+                <span class="badge pos" style="position:absolute;top:18px;right:18px">動詞</span>
+                <div class="hint">點擊翻回正面</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fc-foot">
+            <div class="fc-grade">
+              <button class="btn dont">✕　不熟</button>
+              <button class="btn know">✓　認識</button>
+            </div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ════════ 3. QUIZ ════════ -->
+    <div class="frame-wrap">
+      <div class="frame-cap"><h3>選擇題</h3><span class="ja">QuizMode</span><span class="pri p1">P1</span></div>
+      <div class="phone"><div class="screen">
+        <div class="statusbar"><span>9:41</span><span class="dots"><b></b><b></b><b style="background:var(--gr2)"></b></span></div>
+        <div class="body">
+          <div class="appbar">
+            <span class="ic">‹</span>
+            <h2>選擇題</h2>
+            <span class="count">5 / 20</span>
+          </div>
+          <div style="padding:0 18px"><div class="pbar"><i style="width:25%"></i></div></div>
+          <div class="timer-row"><span class="timer-top"><span class="ring"></span>11s</span></div>
+
+          <div class="vcenter">
+            <div class="quiz-q">
+              <div class="q-eyebrow">這個意思的日文是？</div>
+              <div class="subject">站</div>
+            </div>
+
+            <div style="margin-top:4px">
+              <div class="opt correct"><span class="k">立つ</span><span class="rd">たつ</span><span class="mk">✓</span></div>
+              <div class="opt"><span class="k">座る</span><span class="rd">すわる</span></div>
+              <div class="opt wrong"><span class="k">答える</span><span class="rd">こたえる</span><span class="mk">✕</span></div>
+              <div class="opt"><span class="k">質問する</span><span class="rd">しつもん</span></div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px 20px">
+            <button class="btn primary">下一題　›</button>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ════════ 4. TYPING ════════ -->
+    <div class="frame-wrap">
+      <div class="frame-cap"><h3>默寫</h3><span class="ja">TypingMode</span><span class="pri p2">P2</span></div>
+      <div class="phone"><div class="screen">
+        <div class="statusbar"><span>9:41</span><span class="dots"><b></b><b></b><b style="background:var(--gr2)"></b></span></div>
+        <div class="body">
+          <div class="appbar">
+            <span class="ic">‹</span>
+            <h2>默寫</h2>
+            <span class="count">8 / 30</span>
+          </div>
+          <div style="padding:0 18px"><div class="pbar"><i style="width:26%"></i></div></div>
+          <div class="timer-row"><span class="timer-top"><span class="ring"></span>20s</span></div>
+
+          <div class="vcenter">
+            <div class="ty-q">
+              <div class="q-eyebrow">這個意思的日文是？</div>
+              <div class="meaning">回答</div>
+              <div class="ask"><span class="badge sec">請輸入讀音（假名）</span></div>
+            </div>
+
+            <div class="ty-field">
+              <div class="input focus"><span>こたえ</span><span class="caret"></span></div>
+            </div>
+
+            <div class="reveal">
+              <div class="ok">✓ 正確</div>
+              <div class="row"><span class="k">答える</span><span class="r">こたえる</span></div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px 20px">
+            <button class="btn primary">下一題　›</button>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ════════ 5. WORD LIST ════════ -->
+    <div class="frame-wrap">
+      <div class="frame-cap"><h3>單字列表</h3><span class="ja">VocabListScreen</span><span class="pri p0">P0</span></div>
+      <div class="phone"><div class="screen">
+        <div class="statusbar"><span>9:41</span><span class="dots"><b></b><b></b><b style="background:var(--gr2)"></b></span></div>
+        <div class="body">
+          <div class="appbar">
+            <span class="ic">‹</span>
+            <h2>單字列表</h2>
+            <span class="count">第9課 · 57</span>
+          </div>
+          <div class="search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7d7b76" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            <span class="ph">搜尋日文或中文…</span>
+          </div>
+          <div class="chiprow" style="padding-bottom:6px">
+            <button class="chip on">全部</button>
+            <button class="chip">認識</button>
+            <button class="chip">不熟</button>
+            <button class="chip">未見</button>
+          </div>
+
+          <div class="scroll">
+            <div class="grp-head"><span class="badge sec">文型１</span><span class="ct">4 個</span></div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--g700)"></span>
+              <span class="w"><span class="top"><span class="k">座る</span><span class="rd">すわる ⓪</span></span><span class="mn">坐</span></span>
+              <span class="st"><span class="badge known">認識</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--r700)"></span>
+              <span class="w"><span class="top"><span class="k">立つ</span><span class="rd">たつ ①</span></span><span class="mn">站</span></span>
+              <span class="st"><span class="badge unknown">不熟</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--gr2)"></span>
+              <span class="w"><span class="top"><span class="k">質問（する）</span><span class="rd">しつもん ⓪</span></span><span class="mn">詢問／提問</span></span>
+              <span class="st"><span class="badge unseen">未見</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--g700)"></span>
+              <span class="w"><span class="top"><span class="k">答える</span><span class="rd">こたえる ③</span></span><span class="mn">回答</span></span>
+              <span class="st"><span class="badge known">認識</span></span>
+            </div>
+
+            <div class="grp-head"><span class="badge sec">文型２</span><span class="ct">3 個</span></div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--gr2)"></span>
+              <span class="w"><span class="top"><span class="k">起きる</span><span class="rd">おきる ②</span></span><span class="mn">起床／發生</span></span>
+              <span class="st"><span class="badge unseen">未見</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--g700)"></span>
+              <span class="w"><span class="top"><span class="k">寝る</span><span class="rd">ねる ⓪</span></span><span class="mn">睡覺</span></span>
+              <span class="st"><span class="badge known">認識</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--r700)"></span>
+              <span class="w"><span class="top"><span class="k">働く</span><span class="rd">はたらく ⓪</span></span><span class="mn">工作</span></span>
+              <span class="st"><span class="badge unknown">不熟</span></span>
+            </div>
+            <div class="wrow">
+              <span class="pdot" style="background:var(--gr2)"></span>
+              <span class="w"><span class="top"><span class="k">ノート</span><span class="rd">①</span></span><span class="mn">筆記本</span></span>
+              <span class="st"><span class="badge unseen">未見</span></span>
+            </div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+  </div>
+
+  <div class="foot-note">
+    <b>同步重點（請確認）：</b><br>
+    1. <b>顏色語義</b>：頁面骨架全灰階，綠／紅只用在「認識 / 不熟 / 對 / 錯」這四個瞬間 —— 連按鈕也只有答題那一刻才有色。<br>
+    2. <b>聲調呈現</b>：用圈號 <code>⓪①②③</code> 顯示，雙聲調如 <code>ズボン ①②</code> 並列；資料層 <code>accent</code> 仍是 <code>number[]</code>。<br>
+    3. <b>漢字錨點</b>：所有日文漢字用 Noto Serif JP，假名／中文／UI 用 Sans —— serif 是這個 app 的視覺記憶點。<br>
+    4. <b>P0 先做</b>：首頁 · 閃卡 · 單字列表（已標 P0）；選擇題 P1、默寫 P2 先給你看設計語言一致即可，不在第一輪開工範圍。
+  </div>
+
+</body>
+</html>

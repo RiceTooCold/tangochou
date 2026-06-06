@@ -1,0 +1,811 @@
+{
+  "lesson": 8,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "8単語.pdf",
+  "words": [
+    {
+      "id": "l8-001",
+      "word": "…かどうか",
+      "reading": "かどうか",
+      "accent": [],
+      "meaning": "（不知）要不要...",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-002",
+      "word": "わかりません",
+      "reading": "わかりません",
+      "accent": [],
+      "meaning": "不知道",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-003",
+      "word": "まだわかりません",
+      "reading": "まだわかりません",
+      "accent": [],
+      "meaning": "還不知道",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-004",
+      "word": "まだ",
+      "reading": "まだ",
+      "accent": [
+        1
+      ],
+      "meaning": "還沒",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-005",
+      "word": "待ちます（待つ）",
+      "reading": "まちます（まつ）",
+      "accent": [
+        3
+      ],
+      "meaning": "等待",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-006",
+      "word": "遊びます（遊ぶ）",
+      "reading": "あそびます（あそぶ）",
+      "accent": [
+        4
+      ],
+      "meaning": "玩",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-007",
+      "word": "死にます（死ぬ）",
+      "reading": "しにます（しぬ）",
+      "accent": [
+        3
+      ],
+      "meaning": "死亡",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-008",
+      "word": "決めます（決める）",
+      "reading": "きめます（きめる）",
+      "accent": [
+        3
+      ],
+      "meaning": "決定",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-009",
+      "word": "大学院",
+      "reading": "だいがくいん",
+      "accent": [
+        4
+      ],
+      "meaning": "研究所",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-010",
+      "word": "登ります（登る）",
+      "reading": "のぼります（のぼる）",
+      "accent": [
+        4
+      ],
+      "meaning": "爬、攀爬、攀登",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-011",
+      "word": "なります（なる）",
+      "reading": "なります（なる）",
+      "accent": [
+        3
+      ],
+      "meaning": "當、成為",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-012",
+      "word": "DVD",
+      "reading": "ディーブイディー",
+      "accent": [
+        5
+      ],
+      "meaning": "DVD",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-013",
+      "word": "漫画",
+      "reading": "まんが",
+      "accent": [
+        0
+      ],
+      "meaning": "漫畫",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-014",
+      "word": "大変な",
+      "reading": "たいへんな",
+      "accent": [
+        0
+      ],
+      "meaning": "辛苦的",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l8-015",
+      "word": "雨",
+      "reading": "あめ",
+      "accent": [
+        1
+      ],
+      "meaning": "雨",
+      "section": "文型１",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-016",
+      "word": "外国語",
+      "reading": "がいこくご",
+      "accent": [
+        0
+      ],
+      "meaning": "外文",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-017",
+      "word": "会",
+      "reading": "かい",
+      "accent": [
+        1
+      ],
+      "meaning": "聚會、集會",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-018",
+      "word": "コート【テニスコート】",
+      "reading": "コート",
+      "accent": [
+        1
+      ],
+      "meaning": "球場",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-019",
+      "word": "有名な",
+      "reading": "ゆうめいな",
+      "accent": [
+        0
+      ],
+      "meaning": "有名的",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l8-020",
+      "word": "オリンピック",
+      "reading": "オリンピック",
+      "accent": [
+        4
+      ],
+      "meaning": "奧林匹克運動會",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-021",
+      "word": "フリーマーケット",
+      "reading": "フリーマーケット",
+      "accent": [
+        4
+      ],
+      "meaning": "跳蚤市場【英 flea market】",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-022",
+      "word": "棚",
+      "reading": "たな",
+      "accent": [
+        0
+      ],
+      "meaning": "架子、櫃子",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-023",
+      "word": "講義",
+      "reading": "こうぎ",
+      "accent": [
+        1
+      ],
+      "meaning": "講座、講解",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-024",
+      "word": "神社",
+      "reading": "じんじゃ",
+      "accent": [
+        1
+      ],
+      "meaning": "神社、廟",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-025",
+      "word": "（お）祭り",
+      "reading": "（お）まつり",
+      "accent": [
+        0
+      ],
+      "meaning": "祭典、慶典、廟會",
+      "section": "文型２",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-026",
+      "word": "今度の",
+      "reading": "こんどの",
+      "accent": [
+        1
+      ],
+      "meaning": "下次的",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-027",
+      "word": "ちょっと…",
+      "reading": "ちょっと",
+      "accent": [
+        1
+      ],
+      "meaning": "表達委婉拒絕邀請",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-028",
+      "word": "東京タワー",
+      "reading": "とうきょうタワー",
+      "accent": [
+        5
+      ],
+      "meaning": "東京鐵塔",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-029",
+      "word": "秋葉原",
+      "reading": "あきはばら",
+      "accent": [
+        3
+      ],
+      "meaning": "秋葉原",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-030",
+      "word": "東京ドーム",
+      "reading": "とうきょうドーム",
+      "accent": [
+        5
+      ],
+      "meaning": "東京巨蛋【英 Dome】",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-031",
+      "word": "ディズニーランド",
+      "reading": "ディズニーランド",
+      "accent": [
+        5
+      ],
+      "meaning": "迪士尼樂園",
+      "section": "文型３",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-032",
+      "word": "奈良",
+      "reading": "なら",
+      "accent": [
+        1
+      ],
+      "meaning": "奈良",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-033",
+      "word": "中国語",
+      "reading": "ちゅうごくご",
+      "accent": [
+        0
+      ],
+      "meaning": "中文",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-034",
+      "word": "弾きます（弾く）",
+      "reading": "ひきます（ひく）",
+      "accent": [
+        3
+      ],
+      "meaning": "彈奏（樂器）",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l8-035",
+      "word": "ピアノ",
+      "reading": "ピアノ",
+      "accent": [
+        0
+      ],
+      "meaning": "鋼琴",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-036",
+      "word": "ギター",
+      "reading": "ギター",
+      "accent": [
+        1
+      ],
+      "meaning": "吉他",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-037",
+      "word": "メロン",
+      "reading": "メロン",
+      "accent": [
+        1
+      ],
+      "meaning": "哈密瓜",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-038",
+      "word": "スイカ",
+      "reading": "スイカ",
+      "accent": [
+        0
+      ],
+      "meaning": "西瓜【水瓜】",
+      "section": "文型４",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-039",
+      "word": "地震",
+      "reading": "じしん",
+      "accent": [
+        0
+      ],
+      "meaning": "地震",
+      "section": "文型５",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-040",
+      "word": "東北",
+      "reading": "とうほく",
+      "accent": [
+        0
+      ],
+      "meaning": "東北",
+      "section": "文型５",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-041",
+      "word": "自動販売機",
+      "reading": "じどうはんばいき",
+      "accent": [
+        6
+      ],
+      "meaning": "自動販賣機",
+      "section": "文型５",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-042",
+      "word": "どこか",
+      "reading": "どこか",
+      "accent": [
+        1
+      ],
+      "meaning": "某處（不確定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-043",
+      "word": "どこへも",
+      "reading": "どこへも",
+      "accent": [
+        0
+      ],
+      "meaning": "哪裡都不去（全面否定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-044",
+      "word": "何か",
+      "reading": "なにか",
+      "accent": [
+        1
+      ],
+      "meaning": "某是、某些（不確定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-045",
+      "word": "誰か",
+      "reading": "だれか",
+      "accent": [
+        1
+      ],
+      "meaning": "某人（不確定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-046",
+      "word": "何も＋否定",
+      "reading": "なにも",
+      "accent": [
+        0
+      ],
+      "meaning": "什麼都沒有（全面否定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-047",
+      "word": "誰も＋否定",
+      "reading": "だれも",
+      "accent": [
+        0
+      ],
+      "meaning": "誰都不在（全面否定）",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-048",
+      "word": "それは大変ですね",
+      "reading": "それはたいへんですね",
+      "accent": [],
+      "meaning": "真是辛苦呢",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l8-049",
+      "word": "試験勉強",
+      "reading": "しけんべんきょう",
+      "accent": [
+        4
+      ],
+      "meaning": "為讀書考試",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-050",
+      "word": "春休み",
+      "reading": "はるやすみ",
+      "accent": [
+        3
+      ],
+      "meaning": "春假",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-051",
+      "word": "多い",
+      "reading": "おおい",
+      "accent": [
+        1
+      ],
+      "meaning": "多的",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l8-052",
+      "word": "少ない",
+      "reading": "すくない",
+      "accent": [
+        3
+      ],
+      "meaning": "少的",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l8-053",
+      "word": "お辞儀",
+      "reading": "おじぎ",
+      "accent": [
+        0
+      ],
+      "meaning": "鞠躬、行禮",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-054",
+      "word": "握手（します／する）",
+      "reading": "あくしゅ",
+      "accent": [
+        1
+      ],
+      "meaning": "握手",
+      "section": "文型６",
+      "lesson": 8,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l8-055",
+      "word": "いいですね",
+      "reading": "いいですね",
+      "accent": [],
+      "meaning": "不錯、真好呀、很好",
+      "section": "会話",
+      "lesson": 8,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l8-056",
+      "word": "ところ",
+      "reading": "ところ",
+      "accent": [
+        0
+      ],
+      "meaning": "地方、地區",
+      "section": "会話",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-057",
+      "word": "雪",
+      "reading": "ゆき",
+      "accent": [
+        2
+      ],
+      "meaning": "雪",
+      "section": "会話",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-058",
+      "word": "スキー場",
+      "reading": "すきーじょう",
+      "accent": [
+        0
+      ],
+      "meaning": "滑雪場",
+      "section": "会話",
+      "lesson": 8,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l8-059",
+      "word": "へえ",
+      "reading": "へえ",
+      "accent": [
+        0
+      ],
+      "meaning": "感嘆詞：原來如此",
+      "section": "会話",
+      "lesson": 8,
+      "tags": []
+    },
+    {
+      "id": "l8-060",
+      "word": "上手な",
+      "reading": "じょうずな",
+      "accent": [
+        4
+      ],
+      "meaning": "熟練的、擅長的",
+      "section": "会話",
+      "lesson": 8,
+      "tags": [
+        "な形容詞"
+      ]
+    }
+  ]
+}

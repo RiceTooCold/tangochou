@@ -1,0 +1,148 @@
+@import 'tailwindcss';
+
+/* Design tokens (docs/design-system.md) exposed as Tailwind utilities.
+   Colors drive bg, text and border utilities; fonts drive font-sans and
+   font-serif; the radius scale drives the rounded utilities. */
+@theme {
+  /* Status — Forest Green */
+  --color-g800: #1a3a2a;
+  --color-g700: #235132;
+  --color-g100: #e6f0e9;
+  --color-g50: #f1f7f3;
+
+  /* Status — Vermilion Red */
+  --color-r800: #6e1313;
+  --color-r700: #8f1f1f;
+  --color-r100: #f5e8e8;
+  --color-r50: #faf3f3;
+
+  /* Primary — Warm Gray (carries every UI action) */
+  --color-blk: #141412;
+  --color-gr8: #2c2a28;
+  --color-gr6: #4a4845;
+  --color-gr4: #7d7b76;
+  --color-gr2: #c5c3be;
+  --color-gr1: #e4e2dd;
+  --color-gr0: #f2f0eb;
+  --color-wht: #f8f7f3;
+
+  --font-sans: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Noto Serif JP', ui-serif, serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gr6);
+    background: var(--color-gr0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* tabular numerals for counters/timers */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Flashcard 3D flip ── */
+.flip {
+  perspective: 1200px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+.flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* answer-feedback flash for quiz/typing backgrounds */
+@keyframes flash-ok {
+  from {
+    background-color: var(--color-g50);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+@keyframes flash-no {
+  from {
+    background-color: var(--color-r50);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+.flash-ok {
+  animation: flash-ok 0.6s ease;
+}
+.flash-no {
+  animation: flash-no 0.6s ease;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.caret-blink {
+  animation: blink 1s steps(2) infinite;
+}
+
+/* bottom-sheet modal */
+@keyframes sheet {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

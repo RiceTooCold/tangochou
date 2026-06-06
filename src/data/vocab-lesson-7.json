@@ -1,0 +1,1318 @@
+{
+  "lesson": 7,
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "source": "7単語.pdf",
+  "words": [
+    {
+      "id": "l7-001",
+      "word": "家族",
+      "reading": "かぞく",
+      "accent": [
+        1
+      ],
+      "meaning": "家人／家族",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-002",
+      "word": "父",
+      "reading": "ちち",
+      "accent": [
+        1
+      ],
+      "meaning": "爸爸（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-003",
+      "word": "母",
+      "reading": "はは",
+      "accent": [
+        1
+      ],
+      "meaning": "媽媽（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-004",
+      "word": "兄",
+      "reading": "あに",
+      "accent": [
+        1
+      ],
+      "meaning": "哥哥（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-005",
+      "word": "姉",
+      "reading": "あね",
+      "accent": [
+        0
+      ],
+      "meaning": "姐姐（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-006",
+      "word": "弟",
+      "reading": "おとうと",
+      "accent": [
+        4
+      ],
+      "meaning": "弟弟（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-007",
+      "word": "妹",
+      "reading": "いもうと",
+      "accent": [
+        4
+      ],
+      "meaning": "妹妹（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-008",
+      "word": "祖父",
+      "reading": "そふ",
+      "accent": [
+        1
+      ],
+      "meaning": "祖父（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-009",
+      "word": "祖母",
+      "reading": "そぼ",
+      "accent": [
+        1
+      ],
+      "meaning": "祖母（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-010",
+      "word": "夫",
+      "reading": "おっと",
+      "accent": [
+        0
+      ],
+      "meaning": "丈夫（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-011",
+      "word": "妻",
+      "reading": "つま",
+      "accent": [
+        1
+      ],
+      "meaning": "妻子（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-012",
+      "word": "息子",
+      "reading": "むすこ",
+      "accent": [
+        0
+      ],
+      "meaning": "兒子（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-013",
+      "word": "娘",
+      "reading": "むすめ",
+      "accent": [
+        3
+      ],
+      "meaning": "女兒（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-014",
+      "word": "叔父",
+      "reading": "おじ",
+      "accent": [
+        0
+      ],
+      "meaning": "叔叔／舅舅（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-015",
+      "word": "叔母",
+      "reading": "おば",
+      "accent": [
+        0
+      ],
+      "meaning": "姑姑／阿姨（謙稱自己的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-016",
+      "word": "お父さん",
+      "reading": "おとうさん",
+      "accent": [
+        2
+      ],
+      "meaning": "父親（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-017",
+      "word": "お母さん",
+      "reading": "おかあさん",
+      "accent": [
+        2
+      ],
+      "meaning": "母親（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-018",
+      "word": "お兄さん",
+      "reading": "おにいさん",
+      "accent": [
+        2
+      ],
+      "meaning": "哥哥（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-019",
+      "word": "お姉さん",
+      "reading": "おねえさん",
+      "accent": [
+        2
+      ],
+      "meaning": "姐姐（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-020",
+      "word": "弟さん",
+      "reading": "おとうとさん",
+      "accent": [
+        0
+      ],
+      "meaning": "弟弟（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-021",
+      "word": "妹さん",
+      "reading": "いもうとさん",
+      "accent": [
+        0
+      ],
+      "meaning": "妹妹（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-022",
+      "word": "お爺さん",
+      "reading": "おじいさん",
+      "accent": [
+        2
+      ],
+      "meaning": "祖父（尊稱別人的）、老先生（年長男性）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-023",
+      "word": "お婆さん",
+      "reading": "おばあさん",
+      "accent": [
+        2
+      ],
+      "meaning": "祖母（尊稱別人的）、老太太（年長女性）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-024",
+      "word": "ご主人",
+      "reading": "ごしゅじん",
+      "accent": [
+        2
+      ],
+      "meaning": "丈夫（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-025",
+      "word": "ごー",
+      "reading": "ごー",
+      "accent": [],
+      "meaning": "接頭語－表尊敬",
+      "section": "",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-026",
+      "word": "奥さん",
+      "reading": "おくさん",
+      "accent": [
+        1
+      ],
+      "meaning": "妻子（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-027",
+      "word": "お子さん",
+      "reading": "おこさん",
+      "accent": [
+        0
+      ],
+      "meaning": "孩子（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-028",
+      "word": "息子さん",
+      "reading": "むすこさん",
+      "accent": [
+        0
+      ],
+      "meaning": "兒子（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-029",
+      "word": "娘さん",
+      "reading": "むすめさん",
+      "accent": [
+        0
+      ],
+      "meaning": "女兒（尊稱別人的）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-030",
+      "word": "叔父さん",
+      "reading": "おじさん",
+      "accent": [
+        0
+      ],
+      "meaning": "叔叔（尊稱別人的）、大叔（中年男性）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-031",
+      "word": "叔母さん",
+      "reading": "おばさん",
+      "accent": [
+        0
+      ],
+      "meaning": "阿姨（尊稱別人的）、阿姨（中年女性）",
+      "section": "",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-032",
+      "word": "あげます（あげる）",
+      "reading": "あげます（あげる）",
+      "accent": [
+        3
+      ],
+      "meaning": "給、給予、送給",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-033",
+      "word": "もらいます（もらう）",
+      "reading": "もらいます（もらう）",
+      "accent": [
+        4
+      ],
+      "meaning": "收受、領受",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-034",
+      "word": "CD",
+      "reading": "シーディー",
+      "accent": [
+        3
+      ],
+      "meaning": "CD",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-035",
+      "word": "鈴木",
+      "reading": "すずき",
+      "accent": [
+        0
+      ],
+      "meaning": "鈴木",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-036",
+      "word": "山田",
+      "reading": "やまだ",
+      "accent": [
+        0
+      ],
+      "meaning": "山田",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-037",
+      "word": "人形",
+      "reading": "にんぎょう",
+      "accent": [
+        0
+      ],
+      "meaning": "玩偶、娃娃、人偶",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-038",
+      "word": "帽子",
+      "reading": "ぼうし",
+      "accent": [
+        0
+      ],
+      "meaning": "帽子",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-039",
+      "word": "絵はがき",
+      "reading": "えはがき",
+      "accent": [
+        2
+      ],
+      "meaning": "風景明信片",
+      "section": "文型１＆２",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-040",
+      "word": "教えます（教える）",
+      "reading": "おしえます（おしえる）",
+      "accent": [
+        4
+      ],
+      "meaning": "教、教導、告訴",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-041",
+      "word": "習います（習う）",
+      "reading": "ならいます（ならう）",
+      "accent": [
+        4
+      ],
+      "meaning": "學習",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-042",
+      "word": "電話",
+      "reading": "でんわ",
+      "accent": [
+        0
+      ],
+      "meaning": "電話",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-043",
+      "word": "［電話を］かけます（かける）",
+      "reading": "かけます（かける）",
+      "accent": [
+        3
+      ],
+      "meaning": "打【電話】",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-044",
+      "word": "出します（出す）",
+      "reading": "だします（だす）",
+      "accent": [
+        3
+      ],
+      "meaning": "送出、提出",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-045",
+      "word": "荷物",
+      "reading": "にもつ",
+      "accent": [
+        1
+      ],
+      "meaning": "行李",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-046",
+      "word": "プレゼント",
+      "reading": "プレゼント",
+      "accent": [
+        2
+      ],
+      "meaning": "禮物（英 present）",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-047",
+      "word": "送ります（送る）",
+      "reading": "おくります（おくる）",
+      "accent": [
+        4
+      ],
+      "meaning": "送",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-048",
+      "word": "パスポート",
+      "reading": "パスポート",
+      "accent": [
+        3
+      ],
+      "meaning": "護照（英 passport）",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-049",
+      "word": "学生証",
+      "reading": "がくせいしょう",
+      "accent": [
+        0
+      ],
+      "meaning": "學生證",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-050",
+      "word": "見せます（見せる）",
+      "reading": "みせます（みせる）",
+      "accent": [
+        3
+      ],
+      "meaning": "出示、顯示",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-051",
+      "word": "申込書",
+      "reading": "もうしこみしょ",
+      "accent": [
+        0
+      ],
+      "meaning": "申請表",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-052",
+      "word": "お金",
+      "reading": "おかね",
+      "accent": [
+        0
+      ],
+      "meaning": "錢",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-053",
+      "word": "金",
+      "reading": "かね",
+      "accent": [
+        0
+      ],
+      "meaning": "錢",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-054",
+      "word": "貸します（貸す）",
+      "reading": "かします（かす）",
+      "accent": [
+        3
+      ],
+      "meaning": "借出去（借給別人）",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-055",
+      "word": "借ります（借りる）",
+      "reading": "かります（かりる）",
+      "accent": [
+        3
+      ],
+      "meaning": "借入（跟別人借）",
+      "section": "文型３",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-056",
+      "word": "くれます（くれる）",
+      "reading": "くれます（くれる）",
+      "accent": [
+        3
+      ],
+      "meaning": "給（我）",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-057",
+      "word": "ありがとう",
+      "reading": "ありがとう",
+      "accent": [
+        2
+      ],
+      "meaning": "謝謝",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-058",
+      "word": "素敵な",
+      "reading": "すてきな",
+      "accent": [
+        0
+      ],
+      "meaning": "美好的",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l7-059",
+      "word": "嬉しい",
+      "reading": "うれしい",
+      "accent": [
+        3
+      ],
+      "meaning": "開心的",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l7-060",
+      "word": "かわいい",
+      "reading": "かわいい",
+      "accent": [
+        3
+      ],
+      "meaning": "可愛的",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l7-061",
+      "word": "また",
+      "reading": "また",
+      "accent": [
+        0
+      ],
+      "meaning": "又、再、還",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-062",
+      "word": "みんなによろしく",
+      "reading": "みんなによろしく",
+      "accent": [],
+      "meaning": "代我向大家問好",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l7-063",
+      "word": "お誕生日おめでとう",
+      "reading": "おたんじょうびおめでとう",
+      "accent": [],
+      "meaning": "生日快樂",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l7-064",
+      "word": "あまり+否定",
+      "reading": "あまり",
+      "accent": [
+        0
+      ],
+      "meaning": "不太...／不常...",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-065",
+      "word": "【電話を】します（する）",
+      "reading": "します（する）",
+      "accent": [
+        2
+      ],
+      "meaning": "打【電話】",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l7-066",
+      "word": "スカイプ",
+      "reading": "スカイプ",
+      "accent": [
+        2
+      ],
+      "meaning": "Skype",
+      "section": "文型４",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-067",
+      "word": "同じ",
+      "reading": "おなじ",
+      "accent": [
+        0
+      ],
+      "meaning": "一樣、同樣",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l7-068",
+      "word": "結婚（します）",
+      "reading": "けっこん",
+      "accent": [
+        0
+      ],
+      "meaning": "結婚",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l7-069",
+      "word": "喧嘩（します）",
+      "reading": "けんか",
+      "accent": [
+        0
+      ],
+      "meaning": "吵架、打架",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l7-070",
+      "word": "強い",
+      "reading": "つよい",
+      "accent": [
+        2
+      ],
+      "meaning": "強壯的",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l7-071",
+      "word": "チーム",
+      "reading": "チーム",
+      "accent": [
+        1
+      ],
+      "meaning": "隊伍、團體",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-072",
+      "word": "試合",
+      "reading": "しあい",
+      "accent": [
+        0
+      ],
+      "meaning": "比賽",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-073",
+      "word": "恋人",
+      "reading": "こいびと",
+      "accent": [
+        0
+      ],
+      "meaning": "戀人",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-074",
+      "word": "デート（します）",
+      "reading": "デート",
+      "accent": [
+        1
+      ],
+      "meaning": "約會（英 date）",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l7-075",
+      "word": "別れます（別れる）",
+      "reading": "わかれます（わかれる）",
+      "accent": [
+        4
+      ],
+      "meaning": "分開、離別",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-076",
+      "word": "医者",
+      "reading": "いしゃ",
+      "accent": [
+        0
+      ],
+      "meaning": "醫生",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-077",
+      "word": "相談（します）",
+      "reading": "そうだん",
+      "accent": [
+        0
+      ],
+      "meaning": "諮詢、商量",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "する動詞"
+      ]
+    },
+    {
+      "id": "l7-078",
+      "word": "会います（会う）",
+      "reading": "あいます（あう）",
+      "accent": [
+        3
+      ],
+      "meaning": "見面",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-079",
+      "word": "似ています（似る）",
+      "reading": "にています（にる）",
+      "accent": [
+        4
+      ],
+      "meaning": "相似",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-080",
+      "word": "違います（違う）",
+      "reading": "ちがいます（ちがう）",
+      "accent": [
+        4
+      ],
+      "meaning": "不同",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-081",
+      "word": "年",
+      "reading": "とし",
+      "accent": [
+        2
+      ],
+      "meaning": "年齡",
+      "section": "文型５＆６",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-082",
+      "word": "ほしい",
+      "reading": "ほしい",
+      "accent": [
+        2
+      ],
+      "meaning": "想要",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l7-083",
+      "word": "〜たい",
+      "reading": "たい",
+      "accent": [
+        1
+      ],
+      "meaning": "希望助動詞：（我）想要",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-084",
+      "word": "不便な",
+      "reading": "ふべんな",
+      "accent": [
+        1
+      ],
+      "meaning": "不方便的",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": [
+        "な形容詞"
+      ]
+    },
+    {
+      "id": "l7-085",
+      "word": "プール",
+      "reading": "プール",
+      "accent": [
+        1
+      ],
+      "meaning": "游泳池",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-086",
+      "word": "泳ぎます（游ぐ）",
+      "reading": "およぎます（およぐ）",
+      "accent": [
+        4
+      ],
+      "meaning": "游泳",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-087",
+      "word": "アニメ（アニメーション）",
+      "reading": "アニメ（アニメーション）",
+      "accent": [
+        1,
+        3
+      ],
+      "meaning": "動畫、卡通",
+      "section": "文型７＆８",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-088",
+      "word": "時",
+      "reading": "とき",
+      "accent": [
+        2
+      ],
+      "meaning": "時間、時候",
+      "section": "文型９",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-089",
+      "word": "歌います（歌う）",
+      "reading": "うたいます（うたう）",
+      "accent": [
+        4
+      ],
+      "meaning": "唱",
+      "section": "文型９",
+      "lesson": 7,
+      "tags": [
+        "動詞"
+      ]
+    },
+    {
+      "id": "l7-090",
+      "word": "寂しい",
+      "reading": "さびしい",
+      "accent": [
+        3
+      ],
+      "meaning": "寂寞的",
+      "section": "文型９",
+      "lesson": 7,
+      "tags": [
+        "い形容詞"
+      ]
+    },
+    {
+      "id": "l7-091",
+      "word": "病気",
+      "reading": "びょうき",
+      "accent": [
+        0
+      ],
+      "meaning": "生病",
+      "section": "文型９",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-092",
+      "word": "それはよかったですね",
+      "reading": "それはよかったですね",
+      "accent": [],
+      "meaning": "那真是太好了",
+      "section": "会話",
+      "lesson": 7,
+      "tags": [
+        "慣用句"
+      ]
+    },
+    {
+      "id": "l7-093",
+      "word": "〜前",
+      "reading": "まえ",
+      "accent": [
+        1
+      ],
+      "meaning": "～前",
+      "section": "文法",
+      "lesson": 7,
+      "tags": []
+    },
+    {
+      "id": "l7-094",
+      "word": "毎月",
+      "reading": "まいつき",
+      "accent": [
+        0
+      ],
+      "meaning": "每個月",
+      "section": "文法",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    },
+    {
+      "id": "l7-095",
+      "word": "奨学金",
+      "reading": "しょうがくきん",
+      "accent": [
+        0
+      ],
+      "meaning": "獎學金",
+      "section": "文法",
+      "lesson": 7,
+      "tags": [
+        "名詞"
+      ]
+    }
+  ]
+}
