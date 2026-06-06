@@ -13,7 +13,12 @@ const PRACTICE_MODES = new Set(['flashcard', 'quiz', 'typing'])
 export default function App() {
   const [route, setRoute] = useState('home')
   const [pendingMode, setPendingMode] = useState(null) // practice mode awaiting setup
-  const [practice, setPractice] = useState({ lessons: DEFAULT_LESSONS, scope: 'all' })
+  const [practice, setPractice] = useState({
+    lessons: DEFAULT_LESSONS,
+    scope: 'all',
+    count: 20,
+    timed: true,
+  })
 
   function go(target) {
     if (PRACTICE_MODES.has(target)) setPendingMode(target)

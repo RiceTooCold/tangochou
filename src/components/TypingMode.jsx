@@ -2,9 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { wordsForLessons } from '../data/lessons.js'
 import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
 import { answersMatch, bareWord, hasDistinctReading } from '../lib/text.js'
-import { AppBar, Badge, Button, ProgressBar } from './ui.jsx'
+import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui.jsx'
 
-const ROUND_LEN = 20
 const TIME_LIMIT = 20
 
 function shuffle(arr) {
@@ -16,9 +15,10 @@ function shuffle(arr) {
   return a
 }
 
-function buildDeck(words) {
+function buildDeck(words, count) {
+  const n = count === 'all' ? words.length : Math.min(count, words.length)
   return shuffle(words)
-    .slice(0, Math.min(ROUND_LEN, words.length))
+    .slice(0, n)
     .map((word) => ({
       word,
       // ask for kanji or reading ~50/50; kana-only words can only be "kanji" (the word itself)
@@ -40,22 +40,21 @@ function judge(input, { word, target }) {
   return { correct: false, viaReading: false }
 }
 
-export default function TypingMode({ lessons, scope = 'all', onBack }) {
+export default function TypingMode({ lessons, scope = 'all', count = 20, timed = true, onBack }) {
   const { map, setStatus } = useProgress()
   const base = useMemo(() => wordsForLessons(lessons), [lessons])
 
   const [round, setRound] = useState(0)
   const deck = useMemo(() => {
-    return buildDeck(filterByScope(map, base, scope))
+    return buildDeck(filterByScope(map, base, scope), count)
     // built once at entry / restart
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [base, scope, round])
+  }, [base, scope, count, round])
 
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
   const [verdict, setVerdict] = useState(null) // { correct, viaReading } | null
   const [results, setResults] = useState([])
-  const [timerOn, setTimerOn] = useState(true)
   const [secLeft, setSecLeft] = useState(TIME_LIMIT)
   const inputRef = useRef(null)
 
@@ -94,7 +93,7 @@ export default function TypingMode({ lessons, scope = 'all', onBack }) {
 
   // countdown — timeout reveals the answer as incorrect
   useEffect(() => {
-    if (!timerOn || answered || done) return
+    if (!timed || answered || done) return
     if (secLeft <= 0) {
       setVerdict({ correct: false, viaReading: false, timedOut: true })
       setResults((r) => [...r, { word: card.word, correct: false }])
@@ -104,7 +103,7 @@ export default function TypingMode({ lessons, scope = 'all', onBack }) {
     const id = setTimeout(() => setSecLeft((s) => s - 1), 1000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timerOn, answered, done, secLeft, index])
+  }, [timed, answered, done, secLeft, index])
 
   if (done) {
     return <TypingSummary results={results} total={total} onRestart={restart} onBack={onBack} />
@@ -117,28 +116,11 @@ export default function TypingMode({ lessons, scope = 'all', onBack }) {
       <div className="px-[18px]">
         <ProgressBar value={total ? index / total : 0} />
       </div>
-      <div className="flex justify-end px-2.5 pt-2">
-        <button
-          aria-label="計時開關"
-          onClick={() => {
-            setTimerOn((v) => !v)
-            setSecLeft(TIME_LIMIT)
-          }}
-          className="inline-flex items-center gap-1.5 text-xs text-gr6 tnum"
-        >
-          {timerOn ? (
-            <>
-              <span
-                className="inline-block h-3 w-3 rounded-full border-2 border-gr2"
-                style={{ borderTopColor: secLeft <= 5 ? 'var(--color-r700)' : 'var(--color-blk)' }}
-              />
-              {secLeft}s
-            </>
-          ) : (
-            <span className="text-gr4">計時 ✕</span>
-          )}
-        </button>
-      </div>
+      {timed && (
+        <div className="flex justify-end px-[18px] pt-2">
+          <Countdown secLeft={secLeft} />
+        </div>
+      )}
 
       <div className="flex min-h-0 flex-1 flex-col justify-center">
         {/* question */}

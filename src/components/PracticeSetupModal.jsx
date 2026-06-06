@@ -5,13 +5,28 @@ import { Button, Chip, SegToggle } from './ui.jsx'
 
 const MODE_TITLE = { flashcard: '閃卡', quiz: '選擇題', typing: '默寫' }
 
+const COUNT_OPTIONS = [
+  { id: 10, label: '10' },
+  { id: 20, label: '20' },
+  { id: 30, label: '30' },
+  { id: 'all', label: '全部' },
+]
+
 export default function PracticeSetupModal({ mode, initial, onStart, onClose }) {
   const { map } = useProgress()
   const [lessons, setLessons] = useState(initial?.lessons ?? LESSON_NUMBERS)
   const [scope, setScope] = useState(initial?.scope ?? 'all')
+  const [qCount, setQCount] = useState(initial?.count ?? 20)
+  const [timed, setTimed] = useState(initial?.timed ?? true)
 
   const words = useMemo(() => wordsForLessons(lessons), [lessons])
-  const count = filterByScope(map, words, scope).length
+  const available = filterByScope(map, words, scope).length
+
+  // flashcard runs the whole deck; quiz/typing run a fixed number of questions
+  const hasRound = mode !== 'flashcard'
+  const roundN = qCount === 'all' ? available : Math.min(qCount, available)
+  const startLabel =
+    available === 0 ? '沒有符合的單字' : hasRound ? `開始（${roundN} 題）` : `開始（${available} 字）`
 
   const allOn = lessons.length === LESSON_NUMBERS.length
 
@@ -47,15 +62,32 @@ export default function PracticeSetupModal({ mode, initial, onStart, onClose }) 
         <div className="mb-2.5 mt-5 text-[11px] font-medium uppercase tracking-[.1em] text-gr4">範圍</div>
         <SegToggle options={STATUS_OPTIONS} value={scope} onChange={setScope} />
 
+        {hasRound && (
+          <>
+            <div className="mb-2.5 mt-5 text-[11px] font-medium uppercase tracking-[.1em] text-gr4">題數</div>
+            <SegToggle options={COUNT_OPTIONS} value={qCount} onChange={setQCount} />
+
+            <div className="mb-2.5 mt-5 text-[11px] font-medium uppercase tracking-[.1em] text-gr4">計時</div>
+            <SegToggle
+              options={[
+                { id: 'off', label: '不計時' },
+                { id: 'on', label: '計時' },
+              ]}
+              value={timed ? 'on' : 'off'}
+              onChange={(v) => setTimed(v === 'on')}
+            />
+          </>
+        )}
+
         <div className="mt-7 flex gap-3">
           <Button variant="ghost" className="flex-1" onClick={onClose}>取消</Button>
           <Button
             variant="primary"
             className="flex-[1.4]"
-            disabled={count === 0}
-            onClick={() => onStart({ lessons, scope })}
+            disabled={available === 0}
+            onClick={() => onStart({ lessons, scope, count: qCount, timed })}
           >
-            {count === 0 ? '沒有符合的單字' : `開始（${count} 字）`}
+            {startLabel}
           </Button>
         </div>
       </div>

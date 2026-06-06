@@ -74,6 +74,19 @@ export function SegToggle({ options, value, onChange, className = '' }) {
   )
 }
 
+/** Read-only countdown pill (ring turns red in the last 5s). */
+export function Countdown({ secLeft }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 text-xs text-gr6 tnum">
+      <span
+        className="inline-block h-3 w-3 rounded-full border-2 border-gr2"
+        style={{ borderTopColor: secLeft <= 5 ? 'var(--color-r700)' : 'var(--color-blk)' }}
+      />
+      {secLeft}s
+    </span>
+  )
+}
+
 const DOT = { known: 'bg-g700', unknown: 'bg-r700', unseen: 'bg-gr2' }
 export function StatusDot({ status = 'unseen', className = '' }) {
   return <span className={`inline-block h-2 w-2 shrink-0 rounded-full ${DOT[status]} ${className}`} />
