@@ -16,14 +16,57 @@ export function hasDistinctReading(word) {
   return r !== '' && r !== (word.word || '').trim()
 }
 
-/** Strip decorative markers (（…）, ［…］, 〜, spaces) so 質問（する） / ［〜を］〜 compare leniently. */
+/** Strip whole bracketed segments (（…）, ［…］, 【…】) plus 〜 and spaces, e.g. 質問（する） → 質問. */
 export function bareWord(word) {
   const w = typeof word === 'string' ? word : word.word || ''
   return w
     .replace(/（[^）]*）/g, '')
     .replace(/［[^］]*］/g, '')
+    .replace(/【[^】]*】/g, '')
     .replace(/[〜~\s]/g, '')
     .trim()
+}
+
+const clean = (s) => s.replace(/[〜~\s]/g, '').trim()
+
+/**
+ * Every surface form we accept for one base string, treating each bracketed segment
+ * (（…）, ［…］, 【…】) as independently optional. We expand the combinations of keeping
+ * vs dropping each segment's content (so ［電話を］かけます（かける） yields かけます,
+ * 電話をかけます, …) and also add each segment's content alone as an alternative form
+ * (so あげます（あげる） accepts あげる).
+ */
+export function surfaceForms(base) {
+  const b = (typeof base === 'string' ? base : '') || ''
+  if (!b) return []
+  const parts = [] // { text, optional }
+  const re = /[（［【]([^）］】]*)[）］】]/g
+  let last = 0
+  let m
+  while ((m = re.exec(b))) {
+    if (m.index > last) parts.push({ text: b.slice(last, m.index), optional: false })
+    parts.push({ text: m[1], optional: true })
+    last = re.lastIndex
+  }
+  if (last < b.length) parts.push({ text: b.slice(last), optional: false })
+
+  let combos = ['']
+  for (const p of parts) {
+    combos = p.optional
+      ? combos.flatMap((c) => [c, c + p.text]) // drop or keep this segment
+      : combos.map((c) => c + p.text)
+  }
+  const set = new Set(combos.map(clean))
+  for (const p of parts) if (p.optional) set.add(clean(p.text)) // standalone alternative
+  set.delete('')
+  return [...set]
+}
+
+/** Whether a word is a katakana loanword (its bare form is entirely katakana) — answered in katakana. */
+const KATAKANA_ONLY = /^[ァ-ヶーｰ・]+$/
+export function isKatakanaWord(word) {
+  const bare = bareWord(typeof word === 'string' ? word : word?.word || '')
+  return bare !== '' && KATAKANA_ONLY.test(bare)
 }
 
 // ── Typing-mode fuzzy comparison (P2) ────────────────────────────
@@ -33,16 +76,19 @@ const KATA_TO_HIRA = (s) =>
 const FULLWIDTH_TO_HALF = (s) =>
   s.replace(/[！-～]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
 
-/** Normalize an answer for lenient comparison: trim, half-width, hiragana, long-vowel おお/おう unified. */
-export function normalizeAnswer(s) {
+/**
+ * Normalize an answer for lenient comparison: trim, half-width, long-vowel おお/おう unified.
+ * Katakana folds to hiragana unless `foldKana` is false (loanwords must stay katakana).
+ */
+export function normalizeAnswer(s, { foldKana = true } = {}) {
   let t = (s || '').trim()
   t = FULLWIDTH_TO_HALF(t)
-  t = KATA_TO_HIRA(t)
-  // treat long-vowel variants as equivalent: collapse おう/おお → おう family, ー → preceding vowel
+  if (foldKana) t = KATA_TO_HIRA(t)
+  // treat long-vowel variants as equivalent: collapse おお → おう, ー dropped
   t = t.replace(/おお/g, 'おう').replace(/ー/g, '')
   return t
 }
 
-export function answersMatch(input, expected) {
-  return normalizeAnswer(input) === normalizeAnswer(expected)
+export function answersMatch(input, expected, opts) {
+  return normalizeAnswer(input, opts) === normalizeAnswer(expected, opts)
 }

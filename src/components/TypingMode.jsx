@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { wordsForLessons } from '../data/lessons.js'
 import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { answersMatch, bareWord, hasDistinctReading } from '../lib/text.js'
+import { answersMatch, hasDistinctReading, isKatakanaWord, surfaceForms } from '../lib/text.js'
 import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui.jsx'
 
 const TIME_LIMIT = 20
@@ -26,18 +26,19 @@ function buildDeck(words, count) {
     }))
 }
 
-/** Evaluate a typed answer. Returns { correct, viaReading }. */
+/**
+ * Evaluate a typed answer. Returns { correct, viaReading }.
+ * Either the kanji or the reading is accepted regardless of which was asked, and bracketed
+ * parts are optional. Katakana loanwords must be answered in katakana (no kana folding).
+ */
 function judge(input, { word, target }) {
-  if (target === 'reading') {
-    return { correct: answersMatch(input, word.reading), viaReading: false }
-  }
-  // kanji target: accept the word, its bare form, or (leniently) the correct reading
-  const okKanji = answersMatch(input, word.word) || answersMatch(input, bareWord(word.word))
-  if (okKanji) return { correct: true, viaReading: false }
-  if (hasDistinctReading(word) && answersMatch(input, word.reading)) {
-    return { correct: true, viaReading: true }
-  }
-  return { correct: false, viaReading: false }
+  const opts = isKatakanaWord(word.word) ? { foldKana: false } : undefined
+  const okWord = surfaceForms(word.word).some((f) => answersMatch(input, f, opts))
+  const okReading = surfaceForms(word.reading).some((f) => answersMatch(input, f, opts))
+  if (!okWord && !okReading) return { correct: false, viaReading: false }
+  // flag when only the reading matched a question that asked for the kanji
+  const viaReading = !okWord && target === 'kanji' && hasDistinctReading(word)
+  return { correct: true, viaReading }
 }
 
 export default function TypingMode({ lessons, scope = 'all', count = 20, timed = true, onBack }) {
