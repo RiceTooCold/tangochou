@@ -16,17 +16,6 @@ export function hasDistinctReading(word) {
   return r !== '' && r !== (word.word || '').trim()
 }
 
-/** Strip whole bracketed segments (（…）, ［…］, 【…】) plus 〜 and spaces, e.g. 質問（する） → 質問. */
-export function bareWord(word) {
-  const w = typeof word === 'string' ? word : word.word || ''
-  return w
-    .replace(/（[^）]*）/g, '')
-    .replace(/［[^］]*］/g, '')
-    .replace(/【[^】]*】/g, '')
-    .replace(/[〜~\s]/g, '')
-    .trim()
-}
-
 const clean = (s) => s.replace(/[〜~\s]/g, '').trim()
 
 /**
@@ -62,33 +51,23 @@ export function surfaceForms(base) {
   return [...set]
 }
 
-/** Whether a word is a katakana loanword (its bare form is entirely katakana) — answered in katakana. */
-const KATAKANA_ONLY = /^[ァ-ヶーｰ・]+$/
-export function isKatakanaWord(word) {
-  const bare = bareWord(typeof word === 'string' ? word : word?.word || '')
-  return bare !== '' && KATAKANA_ONLY.test(bare)
-}
-
 // ── Typing-mode fuzzy comparison (P2) ────────────────────────────
-const KATA_TO_HIRA = (s) =>
-  s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
-
 const FULLWIDTH_TO_HALF = (s) =>
   s.replace(/[！-～]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
 
 /**
- * Normalize an answer for lenient comparison: trim, half-width, long-vowel おお/おう unified.
- * Katakana folds to hiragana unless `foldKana` is false (loanwords must stay katakana).
+ * Normalize an answer for lenient comparison: trim, half-width, long-vowel おお/ー unified.
+ * Hiragana and katakana are NOT folded together — かぞく and カゾク stay distinct — so a
+ * kana answer must use the right script; only kanji↔kana (via surfaceForms) is tolerated.
  */
-export function normalizeAnswer(s, { foldKana = true } = {}) {
+export function normalizeAnswer(s) {
   let t = (s || '').trim()
   t = FULLWIDTH_TO_HALF(t)
-  if (foldKana) t = KATA_TO_HIRA(t)
   // treat long-vowel variants as equivalent: collapse おお → おう, ー dropped
   t = t.replace(/おお/g, 'おう').replace(/ー/g, '')
   return t
 }
 
-export function answersMatch(input, expected, opts) {
-  return normalizeAnswer(input, opts) === normalizeAnswer(expected, opts)
+export function answersMatch(input, expected) {
+  return normalizeAnswer(input) === normalizeAnswer(expected)
 }

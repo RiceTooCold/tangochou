@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { wordsForLessons } from '../data/lessons.js'
 import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
 import { hasDistinctReading } from '../lib/text.js'
-import { AppBar, Button, Countdown, ProgressBar } from './ui.jsx'
+import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui.jsx'
 
 const TIME_LIMIT = 15
 
@@ -123,6 +123,9 @@ export default function QuizMode({ lessons, scope = 'all', count = 20, timed = t
               <div className="mt-2.5 font-serif text-[34px] font-semibold leading-snug text-blk">{q.answer.word}</div>
               {hasDistinctReading(q.answer) && <div className="mt-1 text-sm text-gr4">{q.answer.reading}</div>}
             </>
+          )}
+          {q.answer.tags?.[0] && (
+            <div className="mt-3"><Badge variant="pos">{q.answer.tags[0]}</Badge></div>
           )}
         </div>
 

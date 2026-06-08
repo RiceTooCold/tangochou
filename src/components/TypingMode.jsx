@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { wordsForLessons } from '../data/lessons.js'
 import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { answersMatch, hasDistinctReading, isKatakanaWord, surfaceForms } from '../lib/text.js'
+import { answersMatch, hasDistinctReading, surfaceForms } from '../lib/text.js'
 import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui.jsx'
 
 const TIME_LIMIT = 20
@@ -29,12 +29,11 @@ function buildDeck(words, count) {
 /**
  * Evaluate a typed answer. Returns { correct, viaReading }.
  * Either the kanji or the reading is accepted regardless of which was asked, and bracketed
- * parts are optional. Katakana loanwords must be answered in katakana (no kana folding).
+ * parts are optional. Hiragana/katakana are not interchangeable (handled in normalizeAnswer).
  */
 function judge(input, { word, target }) {
-  const opts = isKatakanaWord(word.word) ? { foldKana: false } : undefined
-  const okWord = surfaceForms(word.word).some((f) => answersMatch(input, f, opts))
-  const okReading = surfaceForms(word.reading).some((f) => answersMatch(input, f, opts))
+  const okWord = surfaceForms(word.word).some((f) => answersMatch(input, f))
+  const okReading = surfaceForms(word.reading).some((f) => answersMatch(input, f))
   if (!okWord && !okReading) return { correct: false, viaReading: false }
   // flag when only the reading matched a question that asked for the kanji
   const viaReading = !okWord && target === 'kanji' && hasDistinctReading(word)
@@ -128,7 +127,8 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
         <div className="px-[22px] text-center">
           <div className="text-xs tracking-[.05em] text-gr4">這個意思的日文是？</div>
           <div className="mt-2.5 font-serif text-[36px] font-semibold leading-snug text-blk">{card.word.meaning}</div>
-          <div className="mt-3.5">
+          <div className="mt-3.5 flex items-center justify-center gap-2">
+            {card.word.tags?.[0] && <Badge variant="pos">{card.word.tags[0]}</Badge>}
             <Badge variant="sec">{card.target === 'reading' ? '請輸入讀音（假名）' : '請輸入漢字'}</Badge>
           </div>
         </div>
