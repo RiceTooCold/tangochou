@@ -55,7 +55,7 @@ function buildDeck(words: Word[], count: number | 'all'): DeckCard[] {
     .slice(0, n)
     .map((word) => ({
       word,
-      target: hasDistinctReading(word) ? (Math.random() < 0.5 ? 'kanji' as const : 'reading' as const) : 'kanji' as const,
+      target: hasDistinctReading(word) ? (Math.random() < 0.5 ? 'kanji' : 'reading') : 'kanji',
     }))
 }
 

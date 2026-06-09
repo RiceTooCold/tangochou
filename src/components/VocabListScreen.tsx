@@ -3,10 +3,8 @@ import { DEFAULT_LESSONS, LESSON_NUMBERS, wordsForLessons } from '../data/lesson
 import { STATUS_OPTIONS, useProgress } from '../hooks/useProgress'
 import { formatAccent, hasDistinctReading } from '../lib/text'
 import { AppBar, Badge, Chip, SegToggle, StatusDot } from './ui'
+import type { BadgeVariant } from './ui'
 import type { Word, WordStatus, ScopeFilter } from '../types'
-
-/** Badge variant keys matching the BADGE map in ui. */
-type BadgeVariant = 'sec' | 'known' | 'unknown' | 'unseen' | 'pos'
 
 const STATUS_BADGE: Record<WordStatus, [BadgeVariant, string]> = {
   known: ['known', '認識'],

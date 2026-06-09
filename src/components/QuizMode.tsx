@@ -52,7 +52,7 @@ function buildQuiz(questionWords: Word[], pool: Word[], count: number | 'all'): 
     return {
       answer,
       options: shuffle([answer, ...distractors]),
-      dir: Math.random() < 0.5 ? 'cn2jp' as const : 'jp2cn' as const,
+      dir: Math.random() < 0.5 ? 'cn2jp' : 'jp2cn',
     }
   })
 }

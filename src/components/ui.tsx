@@ -3,7 +3,7 @@
 import React from 'react'
 import type { WordStatus } from '../types'
 
-type BadgeVariant = 'sec' | 'known' | 'unknown' | 'unseen' | 'pos'
+export type BadgeVariant = 'sec' | 'known' | 'unknown' | 'unseen' | 'pos'
 
 const BADGE: Record<BadgeVariant, string> = {
   sec: 'bg-gr1 text-gr6',

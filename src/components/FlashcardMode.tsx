@@ -79,9 +79,9 @@ export default function FlashcardMode({ lessons, scope = 'all', onBack }: Flashc
           options={[
             { id: 'jp', label: '日 → 中' },
             { id: 'cn', label: '中 → 日' },
-          ]}
+          ] as const}
           value={dir}
-          onChange={(val) => setDir(val as FlashcardDirection)}
+          onChange={setDir}
         />
       </div>
 
