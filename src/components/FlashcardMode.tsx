@@ -1,13 +1,34 @@
 import { useMemo, useState } from 'react'
-import { wordsForLessons } from '../data/lessons.js'
-import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { formatAccent, hasDistinctReading } from '../lib/text.js'
-import { AppBar, Badge, Button, ProgressBar, SegToggle } from './ui.jsx'
+import { wordsForLessons } from '../data/lessons'
+import { filterByScope, useProgress } from '../hooks/useProgress'
+import { formatAccent, hasDistinctReading } from '../lib/text'
+import { AppBar, Badge, Button, ProgressBar, SegToggle } from './ui'
+import type { ScopeFilter, Word, WordStatus } from '../types'
 
-export default function FlashcardMode({ lessons, scope = 'all', onBack }) {
+type FlashcardDirection = 'jp' | 'cn'
+
+interface GradedEntry {
+  word: Word
+  status: WordStatus
+}
+
+interface FlashcardModeProps {
+  lessons: number[]
+  scope?: ScopeFilter
+  onBack: () => void
+}
+
+interface SummaryProps {
+  graded: GradedEntry[]
+  total: number
+  onRestart: () => void
+  onBack: () => void
+}
+
+export default function FlashcardMode({ lessons, scope = 'all', onBack }: FlashcardModeProps) {
   const { map, setStatus } = useProgress()
 
-  const [dir, setDir] = useState('jp') // 'jp' = 日→中 (front Japanese) | 'cn' = 中→日
+  const [dir, setDir] = useState<FlashcardDirection>('jp') // 'jp' = 日→中 (front Japanese) | 'cn' = 中→日
 
   const deck = useMemo(() => {
     return filterByScope(map, wordsForLessons(lessons), scope)
@@ -15,11 +36,11 @@ export default function FlashcardMode({ lessons, scope = 'all', onBack }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessons, scope])
 
-  const [index, setIndex] = useState(0)
-  const [flipped, setFlipped] = useState(false)
-  const [graded, setGraded] = useState([])
+  const [index, setIndex] = useState<number>(0)
+  const [flipped, setFlipped] = useState<boolean>(false)
+  const [graded, setGraded] = useState<GradedEntry[]>([])
 
-  function grade(status) {
+  function grade(status: WordStatus): void {
     const word = deck[index]
     if (!word) return
     setStatus(word, status)
@@ -28,7 +49,7 @@ export default function FlashcardMode({ lessons, scope = 'all', onBack }) {
     setIndex((i) => i + 1)
   }
 
-  function restart() {
+  function restart(): void {
     setIndex(0)
     setFlipped(false)
     setGraded([])
@@ -60,7 +81,7 @@ export default function FlashcardMode({ lessons, scope = 'all', onBack }) {
             { id: 'cn', label: '中 → 日' },
           ]}
           value={dir}
-          onChange={setDir}
+          onChange={(val) => setDir(val as FlashcardDirection)}
         />
       </div>
 
@@ -132,7 +153,7 @@ export default function FlashcardMode({ lessons, scope = 'all', onBack }) {
   )
 }
 
-function Summary({ graded, total, onRestart, onBack }) {
+function Summary({ graded, total, onRestart, onBack }: SummaryProps) {
   if (total === 0) {
     return (
       <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 px-8 text-center">

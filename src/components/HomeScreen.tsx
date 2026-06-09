@@ -1,14 +1,29 @@
-import { ALL_WORDS } from '../data/lessons.js'
-import { useProgress, tally } from '../hooks/useProgress.jsx'
-import { ProgressBar } from './ui.jsx'
+import { ALL_WORDS } from '../data/lessons'
+import { useProgress, tally } from '../hooks/useProgress'
+import { ProgressBar } from './ui'
+import type { PracticeMode } from '../types'
 
-const MODES = [
+interface ModeEntry {
+  id: PracticeMode
+  glyph: string
+  name: string
+  desc: string
+}
+
+const MODES: ModeEntry[] = [
   { id: 'flashcard', glyph: '札', name: '閃卡', desc: '看日文翻面對讀音與意思' },
   { id: 'quiz', glyph: '選', name: '選擇題', desc: '四選一，可開 15 秒倒數' },
   { id: 'typing', glyph: '書', name: '默寫', desc: '看中文輸入漢字或讀音' },
 ]
 
-function Row({ glyph, name, desc, onClick }) {
+interface RowProps {
+  glyph: string
+  name: string
+  desc: string
+  onClick: () => void
+}
+
+function Row({ glyph, name, desc, onClick }: RowProps): React.ReactElement {
   return (
     <button
       onClick={onClick}
@@ -24,7 +39,11 @@ function Row({ glyph, name, desc, onClick }) {
   )
 }
 
-function SectionLabel({ children }) {
+interface SectionLabelProps {
+  children: React.ReactNode
+}
+
+function SectionLabel({ children }: SectionLabelProps): React.ReactElement {
   return (
     <div className="px-[22px] pb-2.5 pt-[22px] text-[11px] font-medium uppercase tracking-[.1em] text-gr4">
       {children}
@@ -32,11 +51,16 @@ function SectionLabel({ children }) {
   )
 }
 
-export default function HomeScreen({ onStartPractice, onOpenList }) {
+interface HomeScreenProps {
+  onStartPractice: (mode: PracticeMode) => void
+  onOpenList: () => void
+}
+
+export default function HomeScreen({ onStartPractice, onOpenList }: HomeScreenProps): React.ReactElement {
   const { map, resetAll } = useProgress()
   const stats = tally(map, ALL_WORDS)
 
-  function handleReset() {
+  function handleReset(): void {
     if (stats.known === 0 && stats.unknown === 0) return
     if (!window.confirm('確定要清除所有課程的學習進度嗎？此動作無法復原。')) return
     resetAll()

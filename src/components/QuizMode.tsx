@@ -1,12 +1,41 @@
 import { useEffect, useMemo, useState } from 'react'
-import { wordsForLessons } from '../data/lessons.js'
-import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { hasDistinctReading } from '../lib/text.js'
-import { AppBar, Button, Countdown, ProgressBar } from './ui.jsx'
+import { wordsForLessons } from '../data/lessons'
+import { filterByScope, useProgress } from '../hooks/useProgress'
+import { hasDistinctReading } from '../lib/text'
+import { AppBar, Button, Countdown, ProgressBar } from './ui'
+import type { ScopeFilter, Word } from '../types'
 
 const TIME_LIMIT = 15
 
-function shuffle(arr) {
+type QuizDirection = 'cn2jp' | 'jp2cn'
+
+interface QuizQuestion {
+  answer: Word
+  options: Word[]
+  dir: QuizDirection
+}
+
+interface QuizResult {
+  word: Word
+  correct: boolean
+}
+
+interface QuizModeProps {
+  lessons: number[]
+  scope?: ScopeFilter
+  count?: number | 'all'
+  timed?: boolean
+  onBack: () => void
+}
+
+interface QuizSummaryProps {
+  results: QuizResult[]
+  total: number
+  onRestart: () => void
+  onBack: () => void
+}
+
+function shuffle<T>(arr: T[]): T[] {
   const a = arr.slice()
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -15,8 +44,7 @@ function shuffle(arr) {
   return a
 }
 
-// questions drawn from `questionWords`; distractors from the wider `pool`
-function buildQuiz(questionWords, pool, count) {
+function buildQuiz(questionWords: Word[], pool: Word[], count: number | 'all'): QuizQuestion[] {
   const n = count === 'all' ? questionWords.length : Math.min(count, questionWords.length)
   const picked = shuffle(questionWords).slice(0, n)
   return picked.map((answer) => {
@@ -24,34 +52,32 @@ function buildQuiz(questionWords, pool, count) {
     return {
       answer,
       options: shuffle([answer, ...distractors]),
-      // each question randomly asks one direction (like 默寫's kanji/reading)
-      dir: Math.random() < 0.5 ? 'cn2jp' : 'jp2cn',
+      dir: Math.random() < 0.5 ? 'cn2jp' as const : 'jp2cn' as const,
     }
   })
 }
 
-export default function QuizMode({ lessons, scope = 'all', count = 20, timed = true, onBack }) {
+export default function QuizMode({ lessons, scope = 'all', count = 20, timed = true, onBack }: QuizModeProps) {
   const { map, setStatus } = useProgress()
   const pool = useMemo(() => wordsForLessons(lessons), [lessons])
 
-  const [round, setRound] = useState(0)
+  const [round, setRound] = useState<number>(0)
   const quiz = useMemo(() => {
     return buildQuiz(filterByScope(map, pool, scope), pool, count)
-    // built once at entry / restart — not rebuilt as statuses change mid-round
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pool, scope, count, round])
 
-  const [qIndex, setQIndex] = useState(0)
-  const [selected, setSelected] = useState(null) // option index, or 'timeout'
-  const [answered, setAnswered] = useState(false)
-  const [results, setResults] = useState([])
-  const [secLeft, setSecLeft] = useState(TIME_LIMIT)
+  const [qIndex, setQIndex] = useState<number>(0)
+  const [selected, setSelected] = useState<number | 'timeout' | null>(null)
+  const [answered, setAnswered] = useState<boolean>(false)
+  const [results, setResults] = useState<QuizResult[]>([])
+  const [secLeft, setSecLeft] = useState<number>(TIME_LIMIT)
 
   const total = quiz.length
   const done = qIndex >= total
   const q = quiz[qIndex]
 
-  function answer(optionIndex) {
+  function answer(optionIndex: number): void {
     if (answered || !q) return
     const word = q.options[optionIndex] ?? null
     const correct = word?.id === q.answer.id
@@ -61,14 +87,14 @@ export default function QuizMode({ lessons, scope = 'all', count = 20, timed = t
     setStatus(q.answer, correct ? 'known' : 'unknown')
   }
 
-  function next() {
+  function next(): void {
     setSelected(null)
     setAnswered(false)
     setSecLeft(TIME_LIMIT)
     setQIndex((i) => i + 1)
   }
 
-  function restart() {
+  function restart(): void {
     setResults([])
     setSelected(null)
     setAnswered(false)
@@ -77,7 +103,6 @@ export default function QuizMode({ lessons, scope = 'all', count = 20, timed = t
     setRound((r) => r + 1)
   }
 
-  // countdown (only when timed); timeout = wrong answer with no selection
   useEffect(() => {
     if (!timed || answered || done) return
     if (secLeft <= 0) {
@@ -109,7 +134,6 @@ export default function QuizMode({ lessons, scope = 'all', count = 20, timed = t
         </div>
       )}
 
-      {/* question */}
       <div className="min-h-0 flex-1 overflow-y-auto no-scrollbar">
         <div className="px-[22px] pb-5 pt-6 text-center">
           {q.dir === 'cn2jp' ? (
@@ -169,7 +193,7 @@ export default function QuizMode({ lessons, scope = 'all', count = 20, timed = t
   )
 }
 
-function QuizSummary({ results, total, onRestart, onBack }) {
+function QuizSummary({ results, total, onRestart, onBack }: QuizSummaryProps) {
   const correct = results.filter((r) => r.correct).length
   const pct = total ? Math.round((correct / total) * 100) : 0
   const wrong = results.filter((r) => !r.correct)

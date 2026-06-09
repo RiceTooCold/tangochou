@@ -1,14 +1,27 @@
 import { useMemo, useState } from 'react'
-import { DEFAULT_LESSONS, LESSON_NUMBERS, wordsForLessons } from '../data/lessons.js'
-import { STATUS_OPTIONS, useProgress } from '../hooks/useProgress.jsx'
-import { formatAccent, hasDistinctReading } from '../lib/text.js'
-import { AppBar, Badge, Chip, SegToggle, StatusDot } from './ui.jsx'
+import { DEFAULT_LESSONS, LESSON_NUMBERS, wordsForLessons } from '../data/lessons'
+import { STATUS_OPTIONS, useProgress } from '../hooks/useProgress'
+import { formatAccent, hasDistinctReading } from '../lib/text'
+import { AppBar, Badge, Chip, SegToggle, StatusDot } from './ui'
+import type { Word, WordStatus, ScopeFilter } from '../types'
 
-const STATUS_BADGE = { known: ['known', '認識'], unknown: ['unknown', '不熟'], unseen: ['unseen', '未見'] }
+/** Badge variant keys matching the BADGE map in ui. */
+type BadgeVariant = 'sec' | 'known' | 'unknown' | 'unseen' | 'pos'
 
-function groupWords(words, byLesson) {
-  const groups = []
-  const index = new Map()
+const STATUS_BADGE: Record<WordStatus, [BadgeVariant, string]> = {
+  known: ['known', '認識'],
+  unknown: ['unknown', '不熟'],
+  unseen: ['unseen', '未見'],
+}
+
+interface WordGroup {
+  label: string
+  words: Word[]
+}
+
+function groupWords(words: Word[], byLesson: boolean): WordGroup[] {
+  const groups: WordGroup[] = []
+  const index = new Map<string, WordGroup>()
   for (const w of words) {
     const label = byLesson ? `第${w.lesson}課` : w.section || '（未分類）'
     let g = index.get(label)
@@ -22,12 +35,16 @@ function groupWords(words, byLesson) {
   return groups
 }
 
-export default function VocabListScreen({ onBack }) {
+interface VocabListScreenProps {
+  onBack: () => void
+}
+
+export default function VocabListScreen({ onBack }: VocabListScreenProps): React.ReactElement {
   const { map } = useProgress()
-  const [lessons, setLessons] = useState(DEFAULT_LESSONS)
-  const [query, setQuery] = useState('')
-  const [status, setStatus] = useState('all')
-  const [focused, setFocused] = useState(false)
+  const [lessons, setLessons] = useState<number[]>(DEFAULT_LESSONS)
+  const [query, setQuery] = useState<string>('')
+  const [status, setStatus] = useState<ScopeFilter>('all')
+  const [focused, setFocused] = useState<boolean>(false)
 
   const base = useMemo(() => wordsForLessons(lessons), [lessons])
 
@@ -50,7 +67,7 @@ export default function VocabListScreen({ onBack }) {
 
   const allOn = lessons.length === LESSON_NUMBERS.length
 
-  function toggleLesson(n) {
+  function toggleLesson(n: number): void {
     setLessons((prev) =>
       prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n].sort((a, b) => a - b),
     )
@@ -79,7 +96,7 @@ export default function VocabListScreen({ onBack }) {
           </svg>
           <input
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             placeholder="搜尋日文或中文…"
@@ -114,7 +131,7 @@ export default function VocabListScreen({ onBack }) {
                 <span className="text-[11px] text-gr4">{g.words.length} 個</span>
               </div>
               {g.words.map((w) => {
-                const s = map[w.id]?.status || 'unseen'
+                const s: WordStatus = map[w.id]?.status || 'unseen'
                 const [variant, text] = STATUS_BADGE[s]
                 return (
                   <div key={w.id} className="flex items-center gap-3.5 border-b-[.5px] border-gr1 px-5 py-3">

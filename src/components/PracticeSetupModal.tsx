@@ -1,28 +1,35 @@
 import { useMemo, useState } from 'react'
-import { LESSON_NUMBERS, wordsForLessons } from '../data/lessons.js'
-import { STATUS_OPTIONS, filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { Button, Chip, SegToggle } from './ui.jsx'
+import { LESSON_NUMBERS, wordsForLessons } from '../data/lessons'
+import { STATUS_OPTIONS, filterByScope, useProgress } from '../hooks/useProgress'
+import { Button, Chip, SegToggle } from './ui'
+import type { PracticeConfig, PracticeMode, ScopeFilter } from '../types'
 
-const MODE_TITLE = { flashcard: '閃卡', quiz: '選擇題', typing: '默寫' }
+const MODE_TITLE: Record<PracticeMode, string> = { flashcard: '閃卡', quiz: '選擇題', typing: '默寫' }
 
-const COUNT_OPTIONS = [
+const COUNT_OPTIONS: { id: number | 'all'; label: string }[] = [
   { id: 10, label: '10' },
   { id: 20, label: '20' },
   { id: 30, label: '30' },
   { id: 'all', label: '全部' },
 ]
 
-export default function PracticeSetupModal({ mode, initial, onStart, onClose }) {
+interface PracticeSetupModalProps {
+  mode: PracticeMode
+  initial: PracticeConfig
+  onStart: (config: PracticeConfig) => void
+  onClose: () => void
+}
+
+export default function PracticeSetupModal({ mode, initial, onStart, onClose }: PracticeSetupModalProps): React.ReactElement {
   const { map } = useProgress()
-  const [lessons, setLessons] = useState(initial?.lessons ?? LESSON_NUMBERS)
-  const [scope, setScope] = useState(initial?.scope ?? 'all')
-  const [qCount, setQCount] = useState(initial?.count ?? 20)
-  const [timed, setTimed] = useState(initial?.timed ?? true)
+  const [lessons, setLessons] = useState<number[]>(initial?.lessons ?? LESSON_NUMBERS)
+  const [scope, setScope] = useState<ScopeFilter>(initial?.scope ?? 'all')
+  const [qCount, setQCount] = useState<number | 'all'>(initial?.count ?? 20)
+  const [timed, setTimed] = useState<boolean>(initial?.timed ?? true)
 
   const words = useMemo(() => wordsForLessons(lessons), [lessons])
   const available = filterByScope(map, words, scope).length
 
-  // flashcard runs the whole deck; quiz/typing run a fixed number of questions
   const hasRound = mode !== 'flashcard'
   const roundN = qCount === 'all' ? available : Math.min(qCount, available)
   const startLabel =
@@ -30,7 +37,7 @@ export default function PracticeSetupModal({ mode, initial, onStart, onClose }) 
 
   const allOn = lessons.length === LESSON_NUMBERS.length
 
-  function toggleLesson(n) {
+  function toggleLesson(n: number): void {
     setLessons((prev) =>
       prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n].sort((a, b) => a - b),
     )

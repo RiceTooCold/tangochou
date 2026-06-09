@@ -1,33 +1,39 @@
 import { useState } from 'react'
-import { DEFAULT_LESSONS } from './data/lessons.js'
-import { ProgressProvider } from './hooks/useProgress.jsx'
-import HomeScreen from './components/HomeScreen.jsx'
-import FlashcardMode from './components/FlashcardMode.jsx'
-import QuizMode from './components/QuizMode.jsx'
-import TypingMode from './components/TypingMode.jsx'
-import VocabListScreen from './components/VocabListScreen.jsx'
-import PracticeSetupModal from './components/PracticeSetupModal.jsx'
+import { DEFAULT_LESSONS } from './data/lessons'
+import { ProgressProvider } from './hooks/useProgress'
+import HomeScreen from './components/HomeScreen'
+import FlashcardMode from './components/FlashcardMode'
+import QuizMode from './components/QuizMode'
+import TypingMode from './components/TypingMode'
+import VocabListScreen from './components/VocabListScreen'
+import PracticeSetupModal from './components/PracticeSetupModal'
+import type { Route, PracticeMode, PracticeConfig } from './types'
 
-const PRACTICE_MODES = new Set(['flashcard', 'quiz', 'typing'])
+const PRACTICE_MODES = new Set<string>(['flashcard', 'quiz', 'typing'])
 
 export default function App() {
-  const [route, setRoute] = useState('home')
-  const [pendingMode, setPendingMode] = useState(null) // practice mode awaiting setup
-  const [practice, setPractice] = useState({
+  const [route, setRoute] = useState<Route>('home')
+  const [pendingMode, setPendingMode] = useState<PracticeMode | null>(null) // practice mode awaiting setup
+  const [practice, setPractice] = useState<PracticeConfig>({
     lessons: DEFAULT_LESSONS,
     scope: 'all',
     count: 20,
     timed: true,
   })
 
-  function go(target) {
-    if (PRACTICE_MODES.has(target)) setPendingMode(target)
-    else setRoute(target)
+  function go(target: Route | PracticeMode) {
+    if (PRACTICE_MODES.has(target)) {
+      setPendingMode(target as PracticeMode)
+    } else {
+      setRoute(target as Route)
+    }
   }
 
-  function startPractice(config) {
+  function startPractice(config: PracticeConfig) {
     setPractice(config)
-    setRoute(pendingMode)
+    if (pendingMode) {
+      setRoute(pendingMode)
+    }
     setPendingMode(null)
   }
 

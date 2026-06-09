@@ -1,12 +1,46 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { wordsForLessons } from '../data/lessons.js'
-import { filterByScope, useProgress } from '../hooks/useProgress.jsx'
-import { answersMatch, bareWord, hasDistinctReading } from '../lib/text.js'
-import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui.jsx'
+import { wordsForLessons } from '../data/lessons'
+import { filterByScope, useProgress } from '../hooks/useProgress'
+import { answersMatch, bareWord, hasDistinctReading } from '../lib/text'
+import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui'
+import type { ScopeFilter, Word } from '../types'
 
 const TIME_LIMIT = 20
 
-function shuffle(arr) {
+type TypingTarget = 'kanji' | 'reading'
+
+interface DeckCard {
+  word: Word
+  target: TypingTarget
+}
+
+interface Verdict {
+  correct: boolean
+  viaReading: boolean
+  timedOut?: boolean
+}
+
+interface TypingResult {
+  word: Word
+  correct: boolean
+}
+
+interface TypingModeProps {
+  lessons: number[]
+  scope?: ScopeFilter
+  count?: number | 'all'
+  timed?: boolean
+  onBack: () => void
+}
+
+interface TypingSummaryProps {
+  results: TypingResult[]
+  total: number
+  onRestart: () => void
+  onBack: () => void
+}
+
+function shuffle<T>(arr: T[]): T[] {
   const a = arr.slice()
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -15,48 +49,44 @@ function shuffle(arr) {
   return a
 }
 
-function buildDeck(words, count) {
+function buildDeck(words: Word[], count: number | 'all'): DeckCard[] {
   const n = count === 'all' ? words.length : Math.min(count, words.length)
   return shuffle(words)
     .slice(0, n)
     .map((word) => ({
       word,
-      // ask for kanji or reading ~50/50; kana-only words can only be "kanji" (the word itself)
-      target: hasDistinctReading(word) ? (Math.random() < 0.5 ? 'kanji' : 'reading') : 'kanji',
+      target: hasDistinctReading(word) ? (Math.random() < 0.5 ? 'kanji' as const : 'reading' as const) : 'kanji' as const,
     }))
 }
 
-/** Evaluate a typed answer. Returns { correct, viaReading }. */
-function judge(input, { word, target }) {
-  if (target === 'reading') {
-    return { correct: answersMatch(input, word.reading), viaReading: false }
+function judge(input: string, card: DeckCard): Verdict {
+  if (card.target === 'reading') {
+    return { correct: answersMatch(input, card.word.reading), viaReading: false }
   }
-  // kanji target: accept the word, its bare form, or (leniently) the correct reading
-  const okKanji = answersMatch(input, word.word) || answersMatch(input, bareWord(word.word))
+  const okKanji = answersMatch(input, card.word.word) || answersMatch(input, bareWord(card.word.word))
   if (okKanji) return { correct: true, viaReading: false }
-  if (hasDistinctReading(word) && answersMatch(input, word.reading)) {
+  if (hasDistinctReading(card.word) && answersMatch(input, card.word.reading)) {
     return { correct: true, viaReading: true }
   }
   return { correct: false, viaReading: false }
 }
 
-export default function TypingMode({ lessons, scope = 'all', count = 20, timed = true, onBack }) {
+export default function TypingMode({ lessons, scope = 'all', count = 20, timed = true, onBack }: TypingModeProps) {
   const { map, setStatus } = useProgress()
   const base = useMemo(() => wordsForLessons(lessons), [lessons])
 
-  const [round, setRound] = useState(0)
+  const [round, setRound] = useState<number>(0)
   const deck = useMemo(() => {
     return buildDeck(filterByScope(map, base, scope), count)
-    // built once at entry / restart
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [base, scope, count, round])
 
-  const [index, setIndex] = useState(0)
-  const [input, setInput] = useState('')
-  const [verdict, setVerdict] = useState(null) // { correct, viaReading } | null
-  const [results, setResults] = useState([])
-  const [secLeft, setSecLeft] = useState(TIME_LIMIT)
-  const inputRef = useRef(null)
+  const [index, setIndex] = useState<number>(0)
+  const [input, setInput] = useState<string>('')
+  const [verdict, setVerdict] = useState<Verdict | null>(null)
+  const [results, setResults] = useState<TypingResult[]>([])
+  const [secLeft, setSecLeft] = useState<number>(TIME_LIMIT)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const total = deck.length
   const done = index >= total
@@ -67,7 +97,7 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
     if (!done && !answered) inputRef.current?.focus()
   }, [index, done, answered])
 
-  function submit() {
+  function submit(): void {
     if (answered || !card || !input.trim()) return
     const v = judge(input, card)
     setVerdict(v)
@@ -75,14 +105,14 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
     setStatus(card.word, v.correct ? 'known' : 'unknown')
   }
 
-  function next() {
+  function next(): void {
     setInput('')
     setVerdict(null)
     setSecLeft(TIME_LIMIT)
     setIndex((i) => i + 1)
   }
 
-  function restart() {
+  function restart(): void {
     setInput('')
     setVerdict(null)
     setResults([])
@@ -91,7 +121,6 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
     setRound((r) => r + 1)
   }
 
-  // countdown — timeout reveals the answer as incorrect
   useEffect(() => {
     if (!timed || answered || done) return
     if (secLeft <= 0) {
@@ -123,7 +152,6 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
       )}
 
       <div className="flex min-h-0 flex-1 flex-col justify-center">
-        {/* question */}
         <div className="px-[22px] text-center">
           <div className="text-xs tracking-[.05em] text-gr4">這個意思的日文是？</div>
           <div className="mt-2.5 font-serif text-[36px] font-semibold leading-snug text-blk">{card.word.meaning}</div>
@@ -132,14 +160,13 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
           </div>
         </div>
 
-        {/* input */}
         <div className="mt-6 px-[18px]">
           <input
             ref={inputRef}
             value={input}
             disabled={answered}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
               if (e.key !== 'Enter') return
               answered ? next() : submit()
             }}
@@ -148,7 +175,6 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
           />
         </div>
 
-        {/* reveal */}
         {answered && (
           <div className="mt-4 px-[18px]">
             <div
@@ -184,7 +210,7 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
   )
 }
 
-function TypingSummary({ results, total, onRestart, onBack }) {
+function TypingSummary({ results, total, onRestart, onBack }: TypingSummaryProps) {
   const correct = results.filter((r) => r.correct).length
   const pct = total ? Math.round((correct / total) * 100) : 0
   const wrong = results.filter((r) => !r.correct)

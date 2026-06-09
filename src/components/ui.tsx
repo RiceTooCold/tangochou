@@ -1,6 +1,11 @@
 // Shared primitives — every visual matches docs/design-system.md.
 
-const BADGE = {
+import React from 'react'
+import type { WordStatus } from '../types'
+
+type BadgeVariant = 'sec' | 'known' | 'unknown' | 'unseen' | 'pos'
+
+const BADGE: Record<BadgeVariant, string> = {
   sec: 'bg-gr1 text-gr6',
   known: 'bg-g100 text-g700',
   unknown: 'bg-r100 text-r700',
@@ -8,7 +13,13 @@ const BADGE = {
   pos: 'border-[.5px] border-gr2 text-gr4 !text-[10px] tracking-[.02em]',
 }
 
-export function Badge({ variant = 'sec', className = '', children }) {
+interface BadgeProps {
+  variant?: BadgeVariant
+  className?: string
+  children: React.ReactNode
+}
+
+export function Badge({ variant = 'sec', className = '', children }: BadgeProps) {
   return (
     <span
       className={`inline-flex items-center rounded-sm px-2.5 py-[3px] text-[11px] font-medium tracking-[.04em] ${BADGE[variant]} ${className}`}
@@ -18,7 +29,9 @@ export function Badge({ variant = 'sec', className = '', children }) {
   )
 }
 
-const BTN = {
+type ButtonVariant = 'primary' | 'ghost' | 'outline' | 'know' | 'dont'
+
+const BTN: Record<ButtonVariant, string> = {
   primary: 'bg-blk text-wht hover:bg-gr8',
   ghost: 'bg-transparent border-[.5px] border-gr2 text-gr6 hover:border-gr4',
   outline: 'bg-transparent border-[1.5px] border-blk text-blk hover:bg-blk hover:text-wht',
@@ -26,7 +39,12 @@ const BTN = {
   dont: 'bg-r800 text-wht',
 }
 
-export function Button({ variant = 'primary', className = '', ...props }) {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant
+  className?: string
+}
+
+export function Button({ variant = 'primary', className = '', ...props }: ButtonProps) {
   return (
     <button
       className={`inline-flex h-11 select-none items-center justify-center gap-2 rounded-md px-[18px] text-sm font-medium transition-colors disabled:opacity-40 ${BTN[variant]} ${className}`}
@@ -35,7 +53,12 @@ export function Button({ variant = 'primary', className = '', ...props }) {
   )
 }
 
-export function ProgressBar({ value = 0, className = '' }) {
+interface ProgressBarProps {
+  value?: number
+  className?: string
+}
+
+export function ProgressBar({ value = 0, className = '' }: ProgressBarProps) {
   const pct = Math.max(0, Math.min(1, value)) * 100
   return (
     <div className={`h-[5px] overflow-hidden rounded-full bg-gr1 ${className}`}>
@@ -44,7 +67,12 @@ export function ProgressBar({ value = 0, className = '' }) {
   )
 }
 
-export function Chip({ active = false, className = '', ...props }) {
+interface ChipProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  active?: boolean
+  className?: string
+}
+
+export function Chip({ active = false, className = '', ...props }: ChipProps) {
   return (
     <button
       className={`min-h-[34px] whitespace-nowrap rounded-full border-[.5px] px-3.5 py-[7px] text-[13px] font-medium transition-colors ${
@@ -55,8 +83,15 @@ export function Chip({ active = false, className = '', ...props }) {
   )
 }
 
+interface SegToggleProps<T extends string | number> {
+  options: readonly { id: T; label: string }[]
+  value: T
+  onChange: (id: T) => void
+  className?: string
+}
+
 /** Single-select segmented control — a connected bar, distinct from multi-select pills. */
-export function SegToggle({ options, value, onChange, className = '' }) {
+export function SegToggle<T extends string | number>({ options, value, onChange, className = '' }: SegToggleProps<T>) {
   return (
     <div className={`flex rounded-md bg-gr0 p-[3px] ${className}`}>
       {options.map((o) => (
@@ -74,8 +109,12 @@ export function SegToggle({ options, value, onChange, className = '' }) {
   )
 }
 
+interface CountdownProps {
+  secLeft: number
+}
+
 /** Read-only countdown pill (ring turns red in the last 5s). */
-export function Countdown({ secLeft }) {
+export function Countdown({ secLeft }: CountdownProps) {
   return (
     <span className="inline-flex items-center gap-1.5 text-xs text-gr6 tnum">
       <span
@@ -87,12 +126,24 @@ export function Countdown({ secLeft }) {
   )
 }
 
-const DOT = { known: 'bg-g700', unknown: 'bg-r700', unseen: 'bg-gr2' }
-export function StatusDot({ status = 'unseen', className = '' }) {
+const DOT: Record<WordStatus, string> = { known: 'bg-g700', unknown: 'bg-r700', unseen: 'bg-gr2' }
+
+interface StatusDotProps {
+  status?: WordStatus
+  className?: string
+}
+
+export function StatusDot({ status = 'unseen', className = '' }: StatusDotProps) {
   return <span className={`inline-block h-2 w-2 shrink-0 rounded-full ${DOT[status]} ${className}`} />
 }
 
-export function AppBar({ title, onBack, right }) {
+interface AppBarProps {
+  title: string
+  onBack?: () => void
+  right?: React.ReactNode
+}
+
+export function AppBar({ title, onBack, right }: AppBarProps) {
   return (
     <header className="flex items-center gap-3 px-[18px] pb-3.5 pt-2">
       {onBack && (
