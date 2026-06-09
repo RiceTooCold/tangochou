@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { wordsForLessons } from '../data/lessons'
 import { filterByScope, useProgress } from '../hooks/useProgress'
-import { answersMatch, bareWord, hasDistinctReading } from '../lib/text'
+import { answersMatch, hasDistinctReading, surfaceForms } from '../lib/text'
 import { AppBar, Badge, Button, Countdown, ProgressBar } from './ui'
 import type { ScopeFilter, Word } from '../types'
 
@@ -59,16 +59,18 @@ function buildDeck(words: Word[], count: number | 'all'): DeckCard[] {
     }))
 }
 
-function judge(input: string, card: DeckCard): Verdict {
-  if (card.target === 'reading') {
-    return { correct: answersMatch(input, card.word.reading), viaReading: false }
-  }
-  const okKanji = answersMatch(input, card.word.word) || answersMatch(input, bareWord(card.word.word))
-  if (okKanji) return { correct: true, viaReading: false }
-  if (hasDistinctReading(card.word) && answersMatch(input, card.word.reading)) {
-    return { correct: true, viaReading: true }
-  }
-  return { correct: false, viaReading: false }
+/**
+ * Evaluate a typed answer. Returns { correct, viaReading }.
+ * Either the kanji or the reading is accepted regardless of which was asked, and bracketed
+ * parts are optional. Hiragana/katakana are not interchangeable (handled in normalizeAnswer).
+ */
+function judge(input: string, { word, target }: DeckCard): Verdict {
+  const okWord = surfaceForms(word.word).some((f) => answersMatch(input, f))
+  const okReading = surfaceForms(word.reading).some((f) => answersMatch(input, f))
+  if (!okWord && !okReading) return { correct: false, viaReading: false }
+  // flag when only the reading matched a question that asked for the kanji
+  const viaReading = !okWord && target === 'kanji' && hasDistinctReading(word)
+  return { correct: true, viaReading }
 }
 
 export default function TypingMode({ lessons, scope = 'all', count = 20, timed = true, onBack }: TypingModeProps) {
@@ -155,7 +157,8 @@ export default function TypingMode({ lessons, scope = 'all', count = 20, timed =
         <div className="px-[22px] text-center">
           <div className="text-xs tracking-[.05em] text-gr4">這個意思的日文是？</div>
           <div className="mt-2.5 font-serif text-[36px] font-semibold leading-snug text-blk">{card.word.meaning}</div>
-          <div className="mt-3.5">
+          <div className="mt-3.5 flex items-center justify-center gap-2">
+            {card.word.tags?.[0] && <Badge variant="pos">{card.word.tags[0]}</Badge>}
             <Badge variant="sec">{card.target === 'reading' ? '請輸入讀音（假名）' : '請輸入漢字'}</Badge>
           </div>
         </div>

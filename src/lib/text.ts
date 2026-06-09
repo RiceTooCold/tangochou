@@ -18,29 +18,54 @@ export function hasDistinctReading(word: Word): boolean {
   return r !== '' && r !== (word.word || '').trim()
 }
 
-/** Strip decorative markers (（…）, ［…］, 〜, spaces) so 質問（する） / ［〜を］〜 compare leniently. */
-export function bareWord(word: string | Word): string {
-  const w = typeof word === 'string' ? word : word.word || ''
-  return w
-    .replace(/（[^）]*）/g, '')
-    .replace(/［[^］]*］/g, '')
-    .replace(/[〜~\s]/g, '')
-    .trim()
+const clean = (s: string): string => s.replace(/[〜~\s]/g, '').trim()
+
+/**
+ * Every surface form we accept for one base string, treating each bracketed segment
+ * (（…）, ［…］, 【…】) as independently optional. We expand the combinations of keeping
+ * vs dropping each segment's content (so ［電話を］かけます（かける） yields かけます,
+ * 電話をかけます, …) and also add each segment's content alone as an alternative form
+ * (so あげます（あげる） accepts あげる).
+ */
+export function surfaceForms(base: string): string[] {
+  const b = base || ''
+  if (!b) return []
+  const parts: { text: string; optional: boolean }[] = []
+  const re = /[（［【]([^）］】]*)[）］】]/g
+  let last = 0
+  let m: RegExpExecArray | null
+  while ((m = re.exec(b))) {
+    if (m.index > last) parts.push({ text: b.slice(last, m.index), optional: false })
+    parts.push({ text: m[1], optional: true })
+    last = re.lastIndex
+  }
+  if (last < b.length) parts.push({ text: b.slice(last), optional: false })
+
+  let combos = ['']
+  for (const p of parts) {
+    combos = p.optional
+      ? combos.flatMap((c) => [c, c + p.text]) // drop or keep this segment
+      : combos.map((c) => c + p.text)
+  }
+  const set = new Set(combos.map(clean))
+  for (const p of parts) if (p.optional) set.add(clean(p.text)) // standalone alternative
+  set.delete('')
+  return [...set]
 }
 
 // ── Typing-mode fuzzy comparison (P2) ────────────────────────────
-const KATA_TO_HIRA = (s: string): string =>
-  s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
-
 const FULLWIDTH_TO_HALF = (s: string): string =>
   s.replace(/[！-～]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
 
-/** Normalize an answer for lenient comparison: trim, half-width, hiragana, long-vowel おお/おう unified. */
+/**
+ * Normalize an answer for lenient comparison: trim, half-width, long-vowel おお/ー unified.
+ * Hiragana and katakana are NOT folded together — かぞく and カゾク stay distinct — so a
+ * kana answer must use the right script; only kanji↔kana (via surfaceForms) is tolerated.
+ */
 export function normalizeAnswer(s: string): string {
   let t = (s || '').trim()
   t = FULLWIDTH_TO_HALF(t)
-  t = KATA_TO_HIRA(t)
-  // treat long-vowel variants as equivalent: collapse おう/おお → おう family, ー → preceding vowel
+  // treat long-vowel variants as equivalent: collapse おお → おう, ー dropped
   t = t.replace(/おお/g, 'おう').replace(/ー/g, '')
   return t
 }
